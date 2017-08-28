@@ -30,34 +30,42 @@ namespace Proyect_Web
         string Telefono;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["Fotografia"] == null)
-            {
-                Image1.ImageUrl = "~/Img/fr-05.jpg";
+            string Foto = Session["Fotografia"].ToString();
+          
+                if (Foto == "")
+                {
+                    LblContr.Text = "No asignado";
+                    LblCorreo.Text = "No asignado";
+                    LblCorreo2.Text = "No asignado";
+                    LblNombre.Text = "No asignado";
+                    LblSitio.Text = "No asignado";
+                    LblTel.Text = "No asignado";
+                    LblUs.Text = "No asignado";
+                    
+
+                    Image1.ImageUrl = "~/Img/fr-05.jpg";
+                    Perfil1.ImageUrl = "~/Img/fr-05.jpg";
             }
-
-
+            else
+            {
             LblContr.Text = Session["Contraseña"].ToString();
-            LblCorreo.Text =Session["Correo"].ToString();
-            LblCorreo2.Text =Session["Correo2"].ToString();
-            LblNombre.Text =  Session["Nombre"].ToString();
+            LblCorreo.Text = Session["Correo"].ToString();
+            LblCorreo2.Text = Session["Correo2"].ToString();
+            LblNombre.Text = Session["Nombre"].ToString();
             LblSitio.Text = Session["SitioWeb"].ToString();
-            LblTel.Text =  Session["Telefono"].ToString();
+            LblTel.Text = Session["Telefono"].ToString();
             LblUs.Text = Session["Usuario"].ToString();
             Perfil1.ImageUrl = "~/Img/" + Session["Fotografia"];
             Image1.ImageUrl = "~/Img/" + Session["Fotografia"];
-            //Perfil.ImageUrl = "~/Img/" + Session["Fotografia"].ToString();
-            //Label1.Text = Session["Nombre"].ToString();
-
-
-            if (!IsPostBack)
-            {
-                if (fupfoto.HasFile)
-                {
-                    NombreImagen = Path.GetFileName(fupfoto.PostedFile.FileName);
-                    fupfoto.PostedFile.SaveAs(Server.MapPath("~/Img/") + NombreImagen);
-                    Image1.ImageUrl = "~/Img/" + NombreImagen;
-                }
             }
+                //if (fupfoto.HasFile)
+                //{
+                //    NombreImagen = Path.GetFileName(fupfoto.PostedFile.FileName);
+                //    fupfoto.PostedFile.SaveAs(Server.MapPath("~/Img/") + NombreImagen);
+                //    Image1.ImageUrl = "~/Img/" + NombreImagen;
+                //}
+            
+            
             //Response.Write("<script language=javascript>alert('Bienvenido, Si lo desea puede actualizar sus datos');</script>");
 
         }

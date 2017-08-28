@@ -227,7 +227,27 @@
           		</div><!-- /col-lg-12 -->
           	</div>
 
+    <script>
 
+                               function readURL(input) {
+                                   if (input.files && input.files[0]) {
+                                       var reader = new FileReader();
+
+                                       reader.onload = function (e) {
+                                           // IMagen destino 
+                                           $('#<%=Image1.ClientID%>').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+                                   }
+                               }
+
+                               // FileUpload Imagen
+                               $("#<%=fupfoto.ClientID%>").change(function () {
+            readURL(this);
+        });
+
+    </script>
     
 
 
