@@ -21,7 +21,7 @@ namespace BO
         public string Contraseña { get; set; }
         public int IDCiudad { get; set; }
         public string Fotografia { get; set; }
-        
+        public string CorreoConsulta { get; set; }
         public string NombreC { get; set; }
     }
 }

@@ -17,23 +17,27 @@
               <div class="control-group">
                 <div class="form-group floating-label-form-group controls">
                   <label>Nombre</label>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtNombre" ErrorMessage="Ingrese el nombre">*</asp:RequiredFieldValidator>
+                    <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="txtNombre" ErrorMessage="Solo letras" MaximumValue="Z" MinimumValue="A">*</asp:RangeValidator>
                     <asp:TextBox ID="txtNombre" CssClass="form-control" runat="server" placeholder="Nombres/Compania"  data-validation-required-message="Please enter your name."></asp:TextBox>
                  
-                  <p class="help-block text-danger"></p>
+                  <p class="help-block text-danger">&nbsp;</p>
                 </div>
               </div>
               <div class="control-group">
                 <div class="form-group floating-label-form-group controls">
-                  <label>Correo</label>
-                    <asp:TextBox ID="txtCorreo" Cssclass="form-control" placeholder="Correo"  data-validation-required-message="Please enter your email address." runat="server"></asp:TextBox>
+                  <label style="left: 0px; top: 2em">Correo</label>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtCorreo" ErrorMessage="Ingrese el correo">*</asp:RequiredFieldValidator>
+                    <asp:TextBox ID="txtCorreo" Cssclass="form-control" placeholder="Correo"  data-validation-required-message="Please enter your email address." runat="server" style="left: 0px; top: 0px"></asp:TextBox>
                 
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
               <div class="control-group">
                 <div class="form-group floating-label-form-group controls">
-                  <label>Telefono</label>
-                    <asp:TextBox ID="txtTelefono1" type="tel" Cssclass="form-control" placeholder="Telefono"  data-validation-required-message="Please enter your phone number." runat="server"></asp:TextBox>
+                  <label>Telefono</label><asp:RangeValidator ID="RangeValidator3" runat="server" ControlToValidate="txtTelefono1" ErrorMessage="Solo Numeros" MaximumValue="9999999999" MinimumValue="0">*</asp:RangeValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtTelefono1" ErrorMessage="Ingrese el correo">*</asp:RequiredFieldValidator>
+                    <asp:TextBox ID="txtTelefono1" type="tel" Cssclass="form-control" placeholder="Telefono"  data-validation-required-message="Please enter your phone number." runat="server" style="left: 0px; top: 0px"></asp:TextBox>
                   
                   <p class="help-block text-danger"></p>
                 </div>
@@ -56,12 +60,14 @@
               </div>
                 <div class="form-group floating-label-form-group controls">
                   <label>Nombre de Usuario</label>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtUsuario" ErrorMessage="Ingrese el Usuario">*</asp:RequiredFieldValidator>
                     <asp:TextBox ID="txtUsuario" CssClass="form-control" runat="server" placeholder="Nombre de Usuario"  data-validation-required-message="Please enter your name."></asp:TextBox>
                  
                   <p class="help-block text-danger"></p>
                 </div>
                 <div class="form-group floating-label-form-group controls">
                   <label>Contraseña</label>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="txtContraseña" ErrorMessage="Ingrese la contrseña">*</asp:RequiredFieldValidator>
                     <asp:TextBox ID="txtContraseña" CssClass="form-control" runat="server" placeholder="Contraseña"  data-validation-required-message="Please enter your name."></asp:TextBox>
                  
                   <p class="help-block text-danger"></p>

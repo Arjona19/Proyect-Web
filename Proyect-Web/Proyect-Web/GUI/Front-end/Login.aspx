@@ -55,7 +55,7 @@
 		            <label class="checkbox">
                         <asp:CheckBox ID="RememberMe" runat="server" Text="Recordármelo la próxima vez." />
 		                <span class="pull-right">
-		                    <a data-toggle="modal" href="login.html#myModal"> Forgot Password?</a>
+		                    <a data-toggle="modal" href="login.html#myModal"> No recuerdo mi contraseña</a>
 		
 		                </span>
 		            </label>
@@ -90,16 +90,16 @@
 		                  <div class="modal-content">
 		                      <div class="modal-header">
 		                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-		                          <h4 class="modal-title">Forgot Password ?</h4>
+		                          <h4 class="modal-title">Se te olvido la contraseña?</h4>
 		                      </div>
 		                      <div class="modal-body">
-		                          <p>Enter your e-mail address below to reset your password.</p>
-		                          <input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
-		
+		                          <p>Ingresa tu Correo para poder consultarla</p>
+		                          
+                                  <asp:TextBox type="text" ID="txtEmail" name="email" placeholder="Correo" CssClass="form-control placeholder-no-fix" runat="server"></asp:TextBox>
 		                      </div>
 		                      <div class="modal-footer">
 		                          <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
-		                          <button class="btn btn-theme" type="button">Submit</button>
+                                  <asp:Button ID="Button2"  Cssclass="btn btn-theme" runat="server" Text="Consultar" OnClick="Button2_Click" />
 		                      </div>
 		                  </div>
 		              </div>

@@ -2,6 +2,16 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="container-fluid">
+        <div class="col-md-11"></div>
+        <div class="col-md-1">
+           
+                
+                <asp:Button ID="Button4" CssClass="btn btn-primary fa fa-power-off" runat="server" Text="Cerrar Sesión" OnClick="CerrarSession" />
+                
+            
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <link href="../../ClockPicker/standalone.css" rel="stylesheet" />
     <script src="../../ClockPicker/clockpicker.js"></script>
@@ -56,6 +66,9 @@
           			<div class="form-panel">
                   	  <h4 class="mb"><i class="fa fa-angle-right"></i>Agregar Eventos</h4>
                           <div class="col-md-6">
+                              <div class="col-lg-2">
+                                  <asp:TextBox ID="txtIDEvento" CssClass="form-control round-form" placeholder="ID" Enabled="false" runat="server"></asp:TextBox>
+                              </div>
                               <div class="form-group">
                             <asp:TextBox  ID="txtNombreEvento" placeholder="Nombre del evento" runat="server" CssClass="form-control round-form"></asp:TextBox>
                                 
@@ -126,8 +139,8 @@
                                
                    </div>
                                   <asp:Button ID="Button1" Cssclass="btn btn-theme" runat="server" Text="Agregar Evento" AutoPostBack="True" OnClick="Button1_Click" />
-
-
+                                  <asp:Button ID="Button2" CssClass="btn btn-warning" runat="server" Text="Modificar" AutoPostBack="True" OnClick="Button2_Click"  />
+                                  <asp:Button ID="Button3" CssClass="btn btn-danger" runat="server" Text="Eliminar" AutoPostBack="True" OnClick="Button3_Click" />
                              </div>
 <div class="col-md-6">
                     <div class="form-group">
@@ -173,10 +186,10 @@
     <div class="col-md-12">
                       <div class="content-panel">
                           <h4 class="mb"><i class="fa fa-angle-right"></i>Eventos Registrados</h4>
-                         <asp:GridView ID="GridView1"  Cssclass="table table-striped table-advance table-hover" runat="server" AutoGenerateColumns="False">
+                         <asp:GridView ID="GridView1"  Cssclass="table table-striped table-advance table-hover" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="Seleccionar">
                              <Columns>
                                  <asp:ButtonField ButtonType="Button" CommandName="Select" HeaderText="Elije" ShowHeader="True" Text="Seleccionar">
-                                 <ControlStyle CssClass="label label-info label-mini" />
+                                 <ControlStyle CssClass="btn btn-success btn-xs" />
                                  <ItemStyle CssClass="fa fa-check" />
                                  </asp:ButtonField>
                                  <asp:ImageField DataImageUrlField="FotoEvento" DataImageUrlFormatString="~/Img/{0}" HeaderText="Foto ">
@@ -192,6 +205,7 @@
                                  <asp:BoundField DataField="Fecha Fin" HeaderText="Fecha de Finalizacion" SortExpression="FechaFin" />
                                  <asp:BoundField DataField="IDClasificacion" HeaderText="Categoria" SortExpression="IDClasificacion" />
                                  <asp:BoundField DataField="IDUbicacion" HeaderText="Ubicación" SortExpression="IDUbicacion" />
+                                 <asp:BoundField DataField="FotoEvento" HeaderText="Nombre de la Imagen" SortExpression="FotoEvento" />
                              </Columns>
                           </asp:GridView>
                       </div><!-- /content-panel -->

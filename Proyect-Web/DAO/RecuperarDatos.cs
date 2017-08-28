@@ -107,5 +107,17 @@ namespace DAO
             }
             return Con;
         }
+        public string ContraseñaInicio(UsuarioBO obj)
+        {
+
+            DataSet ContraseñaConsulta = con.EjecutarSentencia("select Contraseña from Usuario where Correo = '" + obj.CorreoConsulta + "'");
+            string Con = "";
+            if (ContraseñaConsulta.Tables[0].Rows.Count > 0)
+            {
+                Con = Convert.ToString(ContraseñaConsulta.Tables[0].Rows[0]["Contraseña"]);
+
+            }
+            return Con;
+        }
     }
 }

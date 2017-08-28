@@ -35,7 +35,7 @@ namespace DAO
 
             cmd.Connection = con.ConectarBD();
 
-            sentenciaSQL = "UPDATE [dbo].[Evento]SET [Nombre] ='"+dat.Nombre+"',[Descripcion] ='"+dat.Descripcion+"',[CostoEntrada] ='"+dat.Costo+"' ,[HoraInicio] = '"+dat.HoraInicio+"',[HoraFin] = '"+dat.HoraFin+"',[Fecha Fin] = '"+dat.FechaFin+"',[Fecha Inicio] ='"+dat.FechaInicio+"',[FotoEvento] ='"+dat.Fotografia+"' ,[Autorizado] ='"+dat.Aprobacion+"' ,[IDClasificacion] ='"+dat.Categoria+"',[IDUsuario] = '"+dat.IDUsuario+"',[IDUbicacion] = '"+dat.Ubicacion+"'WHERE IDUsuario = '"+dat.IDUsuario+"'";
+            sentenciaSQL = "UPDATE [dbo].[Evento]SET [Nombre] ='"+dat.Nombre+"',[Descripcion] ='"+dat.Descripcion+"',[CostoEntrada] ='"+dat.Costo+"' ,[HoraInicio] = '"+dat.HoraInicio+"',[HoraFin] = '"+dat.HoraFin+"',[Fecha Fin] = '"+dat.FechaFin+"',[Fecha Inicio] ='"+dat.FechaInicio+"',[FotoEvento] ='"+dat.Fotografia+"' ,[Autorizado] ='"+dat.Aprobacion+"' ,[IDClasificacion] ='"+dat.Categoria+"',[IDUsuario] = '"+dat.IDUsuario+"',[IDUbicacion] = '"+dat.Ubicacion+"'WHERE IDEvento = '"+dat.IDEvento+"'";
             return con.EjecutarSQL(sentenciaSQL);
         }
       
@@ -45,12 +45,13 @@ namespace DAO
             EventosBO dat = (EventosBO)obj;
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con.ConectarBD();
-            sentenciaSQL = "Delete  from Evento where IDUsuario='" + dat.IDUsuario + "' ";
+            sentenciaSQL = "Delete  from Evento where IDEvento='" + dat.IDEvento + "' and IDUsuario='"+dat.IDUsuario+"' ";
             return con.EjecutarSQL(sentenciaSQL);
         }
-        public DataTable TablaEvento()
+        public DataTable TablaEvento(object obj)
         {
-            sentenciaSQL = "Select * from Evento;";
+            EventosBO dat = (EventosBO)obj;
+            sentenciaSQL = "Select * from Evento where IDUsuario='"+dat.IDUsuario+"' ";
             SqlDataAdapter Tabla_BD = new SqlDataAdapter(sentenciaSQL, con.ConectarBD());
             DataTable Tabla_Virtual = new DataTable();
             Tabla_BD.Fill(Tabla_Virtual);

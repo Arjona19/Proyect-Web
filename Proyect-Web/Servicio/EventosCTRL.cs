@@ -31,10 +31,10 @@ namespace Servicio
             status = Tipo_Ser.EliminarEvento(obj);
             return status;
         }
-        public DataTable ServicioTabla()
+        public DataTable ServicioTabla(object obj)
         {
-            return Tipo_Ser.TablaEvento();
+            return Tipo_Ser.TablaEvento(obj);
         }
-       
+
     }
 }

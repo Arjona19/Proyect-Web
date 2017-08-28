@@ -30,7 +30,10 @@ namespace Proyect_Web
         string Telefono;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["Fotografia"] == null)
+            {
+                Image1.ImageUrl = "~/Img/fr-05.jpg";
+            }
 
 
             LblContr.Text = Session["Contraseña"].ToString();
@@ -60,7 +63,7 @@ namespace Proyect_Web
         }
         public void CerrarSession(Object sender, EventArgs e)
         {
-            Session["IDUsuario"] = null;
+            Session.Remove("IDUsuario");
             Response.Redirect("../Front-end/Registro.aspx");
         }
         public int Modificar()

@@ -29,62 +29,80 @@ namespace Proyect_Web
             UsuarioBO bo = new UsuarioBO();
             UsuarioDAO dao = new UsuarioDAO();
             RecuperarDatos R = new RecuperarDatos();
+            try
+            {
+                bo.Usuario = Login1.UserName;
+                bo.Contraseña = Login1.Password;
+                int id = dao.VerificarLog(bo);
+                int tipo = dao.ChekarTipo(bo);
+                bo.IDUsuario = id;
+                string Usuario = R.Usuario(bo);
+                string Contraseña = R.Contraseña(bo);
+                string Nombre = R.Nombre(bo);
+                string SitioWeb = R.SitioWeb(bo);
+                string Correo = R.Correo(bo);
+                string SegCorreo = R.SegundoCorreo(bo);
+                string Correo3 = R.Correo3(bo);
+                string Telefono = R.Telefono(bo);
+                string Foto = dao.Imagen(bo);
+                bo.Fotografia = Foto;
 
-            bo.Usuario = Login1.UserName;
-            bo.Contraseña = Login1.Password;
-            int id = dao.VerificarLog(bo);
-            int tipo = dao.ChekarTipo(bo);
-            bo.IDUsuario = id;
-            string Usuario = R.Usuario(bo);
-            string Contraseña = R.Contraseña(bo);
-            string Nombre = R.Nombre(bo);
-            string SitioWeb = R.SitioWeb(bo);
-            string Correo = R.Correo(bo);
-            string SegCorreo = R.SegundoCorreo(bo);
-            string Correo3 = R.Correo3(bo);
-            string Telefono = R.Telefono(bo);
-            string Foto = dao.Imagen(bo);
-            bo.Fotografia = Foto;
-            
-            if (id != 0)
-            {
-
-                Acceso = true;
-            }
-            else
-            {
-                Response.Write("<script language=javascript>alert('No te has registrado');</script>");
-                Response.Redirect("Login.aspx");
-            }
-            e.Authenticated = Acceso;
-            if (Acceso)
-            {
-                Session["IDUsuario"] = id;
-                Session["Nombre"] = Nombre;
-                Session["Telefono"] = Telefono;
-                Session["Correo"] = Correo;
-                Session["SitioWeb"] = SitioWeb;
-                Session["Correo2"] = SegCorreo;
-                Session["Correo3"] = Correo3;
-                Session["Usuario"] = Usuario;
-                Session["Contraseña"] = Contraseña;
-                Session["Fotografia"] = Foto;
-                Session["IDTipoUsuario"] = tipo;
-                if (tipo == 1)
+                if (id != 0)
                 {
-                    Response.Redirect("");
+
+                    Acceso = true;
                 }
                 else
                 {
-                    if (tipo == 2)
-                    {
-                        
-                        Response.Redirect("~/GUI/Back-end/HomeOrg.aspx");
-                    }
-
+                    Response.Write("<script language=javascript>alert('No te has registrado');</script>");
+                    Response.Redirect("Login.aspx");
                 }
+                e.Authenticated = Acceso;
+                if (Acceso)
+                {
+                    Session["IDUsuario"] = id;
+                    Session["Nombre"] = Nombre;
+                    Session["Telefono"] = Telefono;
+                    Session["Correo"] = Correo;
+                    Session["SitioWeb"] = SitioWeb;
+                    Session["Correo2"] = SegCorreo;
+                    Session["Correo3"] = Correo3;
+                    Session["Usuario"] = Usuario;
+                    Session["Contraseña"] = Contraseña;
+                    Session["Fotografia"] = Foto;
+                    Session["IDTipoUsuario"] = tipo;
+                    if (tipo == 1)
+                    {
+                        Response.Redirect("");
+                    }
+                    else
+                    {
+                        if (tipo == 2)
+                        {
 
+                            Response.Redirect("~/GUI/Back-end/HomeOrg.aspx");
+                        }
+
+                    }
+                }
             }
+            catch (Exception)
+            {
+                Response.Write("<script language=javascript>alert('Verifica tus datos');</script>");
+                throw;
+            }
+            
+
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            RecuperarDatos r = new RecuperarDatos();
+            UsuarioBO bo = new UsuarioBO();
+            bo.CorreoConsulta = txtEmail.Text;
+            string Consulta =  r.ContraseñaInicio(bo);
+            Response.Write("<script language=javascript>alert('Tu contraseña es: "+Consulta+"');</script>");
+
         }
     }
 }

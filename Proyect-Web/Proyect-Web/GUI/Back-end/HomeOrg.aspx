@@ -4,10 +4,19 @@
 </asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <script src="../../SweetAlert/sweetalert.min.js"></script>
-
+    <link href="../../Menu/font-awesome.min.css" rel="stylesheet" />
       <link href="../../SweetAlert/sweetalert.css" rel="stylesheet" />
    
-    
+    <div class="container-fluid">
+        <div class="col-md-11"></div>
+        <div class="col-md-1">
+           
+                
+                <asp:Button ID="CerrarSesion" CssClass="btn btn-primary fa fa-power-off" runat="server" Text="Cerrar Sesión" OnClick="CerrarSession" />
+                
+            
+        </div>
+    </div>
     
     
     <style>
