@@ -58,10 +58,19 @@ namespace DAO
             return Tabla_Virtual;
         }
 
-       
-       
+        public DataTable VerEvento()
+        {
+            
+            sentenciaSQL = "Select * from Evento";
+            SqlDataAdapter Tabla_BD = new SqlDataAdapter(sentenciaSQL, con.ConectarBD());
+            DataTable Tabla_Virtual = new DataTable();
+            Tabla_BD.Fill(Tabla_Virtual);
+            return Tabla_Virtual;
+        }
 
-        
+
+
+
         public ArrayList RecuperarCiudad()
         {
             sentenciaSQL = "Select * From Ubicaciones;";

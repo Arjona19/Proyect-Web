@@ -98,6 +98,11 @@
     <Content Include="assets\img\28-1.jpg" />
     <Content Include="assets\img\fondo.jpg" />
     <Content Include="assets\js\jquery-1.10.2.js" />
+    <Content Include="Carrusel\jquery-1.9.1.min.js" />
+    <Content Include="Carrusel\jquery-3.2.1.js" />
+    <Content Include="Carrusel\owl.carousel.css" />
+    <Content Include="Carrusel\owl.carousel.js" />
+    <Content Include="Carrusel\owl.theme.default.css" />
     <Content Include="ClockPicker\bootstrap-clockpicker.css" />
     <Content Include="ClockPicker\bootstrap-clockpicker.js" />
     <Content Include="ClockPicker\clockpicker.css" />
@@ -117,6 +122,7 @@
     <Content Include="GUI\Back-end\Ubicaciones.aspx" />
     <Content Include="GUI\Front-end\css\freelancer.css" />
     <Content Include="GUI\Front-end\css\freelancer.min.css" />
+    <Content Include="GUI\Front-end\EventosF.aspx" />
     <Content Include="GUI\Front-end\img\portfolio\cabin.png" />
     <Content Include="GUI\Front-end\img\portfolio\cake.png" />
     <Content Include="GUI\Front-end\img\portfolio\circus.png" />
@@ -246,6 +252,13 @@
     </Compile>
     <Compile Include="GUI\Back-end\Ubicaciones.aspx.designer.cs">
       <DependentUpon>Ubicaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Front-end\EventosF.aspx.cs">
+      <DependentUpon>EventosF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Front-end\EventosF.aspx.designer.cs">
+      <DependentUpon>EventosF.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUI\Front-end\Registro.aspx.cs">
       <DependentUpon>Registro.aspx</DependentUpon>
