@@ -98,11 +98,11 @@
     <Content Include="assets\img\28-1.jpg" />
     <Content Include="assets\img\fondo.jpg" />
     <Content Include="assets\js\jquery-1.10.2.js" />
-    <Content Include="Carrusel\jquery-1.9.1.min.js" />
-    <Content Include="Carrusel\jquery-3.2.1.js" />
-    <Content Include="Carrusel\owl.carousel.css" />
-    <Content Include="Carrusel\owl.carousel.js" />
-    <Content Include="Carrusel\owl.theme.default.css" />
+    <Content Include="Carrusel\jquery-1.10.2.min.js" />
+    <Content Include="Carrusel\jquery.mousewheel-3.0.6.min.js" />
+    <Content Include="Carrusel\jquery.rondell.css" />
+    <Content Include="Carrusel\jquery.rondell.min.js" />
+    <Content Include="Carrusel\modernizr-2.0.6.min.js" />
     <Content Include="ClockPicker\bootstrap-clockpicker.css" />
     <Content Include="ClockPicker\bootstrap-clockpicker.js" />
     <Content Include="ClockPicker\clockpicker.css" />
