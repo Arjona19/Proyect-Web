@@ -19,7 +19,7 @@ namespace DAO
         // SqlCommand cmd;
         public SqlConnection ConectarBD()
         {
-            string cadena = "Data Source=SANTIAGO-ARJONA\\SQLEXPRESS;Initial Catalog=EventosProyecto;Integrated Security=True";
+            string cadena = "Data Source=LAPTOP-TIF5UA39\\SANTIAGO;Initial Catalog=EventosProyecto;Integrated Security=True";
             con = new SqlConnection(cadena);
             return con;
         }
