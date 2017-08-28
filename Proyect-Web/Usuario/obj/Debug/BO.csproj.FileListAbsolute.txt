@@ -15,3 +15,8 @@ C:\Users\Santiago\Documents\Proyect-Web\Proyect-Web\Usuario\obj\Debug\BO.csprojR
 C:\Users\Santiago\Documents\Proyect-Web\Proyect-Web\Usuario\obj\Debug\BO.csproj.CoreCompileInputs.cache
 C:\Users\Santiago\Documents\Proyect-Web\Proyect-Web\Usuario\obj\Debug\Usuario.dll
 C:\Users\Santiago\Documents\Proyect-Web\Proyect-Web\Usuario\obj\Debug\Usuario.pdb
+C:\Users\WILBERTH\Documents\Proyect-Web\Proyect-Web\Usuario\bin\Debug\Usuario.dll
+C:\Users\WILBERTH\Documents\Proyect-Web\Proyect-Web\Usuario\bin\Debug\Usuario.pdb
+C:\Users\WILBERTH\Documents\Proyect-Web\Proyect-Web\Usuario\obj\Debug\BO.csprojResolveAssemblyReference.cache
+C:\Users\WILBERTH\Documents\Proyect-Web\Proyect-Web\Usuario\obj\Debug\Usuario.dll
+C:\Users\WILBERTH\Documents\Proyect-Web\Proyect-Web\Usuario\obj\Debug\Usuario.pdb

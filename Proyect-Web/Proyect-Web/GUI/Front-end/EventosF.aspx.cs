@@ -23,8 +23,8 @@ namespace Proyect_Web.GUI.Front_end
         }
         public void MostrarCAtalogo()
         {
-            Repeater1.DataSource = objEvento.VerEvento();
-            Repeater1.DataBind();
+            DataList1.DataSource = objEvento.VerEvento();
+            DataList1.DataBind();
         }
     }
 }

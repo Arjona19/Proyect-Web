@@ -21,3 +21,10 @@ C:\Users\Santiago\Documents\Proyect-Web\Proyect-Web\DAO\obj\Debug\DAO.csprojReso
 C:\Users\Santiago\Documents\Proyect-Web\Proyect-Web\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
 C:\Users\Santiago\Documents\Proyect-Web\Proyect-Web\DAO\obj\Debug\DAO.dll
 C:\Users\Santiago\Documents\Proyect-Web\Proyect-Web\DAO\obj\Debug\DAO.pdb
+C:\Users\WILBERTH\Documents\Proyect-Web\Proyect-Web\DAO\bin\Debug\DAO.dll
+C:\Users\WILBERTH\Documents\Proyect-Web\Proyect-Web\DAO\bin\Debug\DAO.pdb
+C:\Users\WILBERTH\Documents\Proyect-Web\Proyect-Web\DAO\bin\Debug\Usuario.dll
+C:\Users\WILBERTH\Documents\Proyect-Web\Proyect-Web\DAO\bin\Debug\Usuario.pdb
+C:\Users\WILBERTH\Documents\Proyect-Web\Proyect-Web\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+C:\Users\WILBERTH\Documents\Proyect-Web\Proyect-Web\DAO\obj\Debug\DAO.dll
+C:\Users\WILBERTH\Documents\Proyect-Web\Proyect-Web\DAO\obj\Debug\DAO.pdb
