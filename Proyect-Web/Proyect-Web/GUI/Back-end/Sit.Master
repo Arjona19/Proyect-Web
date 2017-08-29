@@ -187,7 +187,7 @@
             	<ul class="nav pull-right top-menu">
 <%--                    <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">LinkButton</asp:LinkButton>--%>
                    <%-- <asp:Button ID="Button3"  Cssclass="logout" runat="server" Text="Cerrar Sesion" OnClick="CerrarSession" />--%>
-                    <li><a class="logout" href="login.html">Logout</a></li>
+                    <li><a class="logout" href="../Front-end/EventosF.aspx">Salir</a></li>
                     
             	</ul>
             </div>
@@ -210,12 +210,12 @@
                           <span>Perfil</span>
                       </a>
                   </li>
-                   <li class="mt">
+                  <%-- <li class="mt">
                       <a href="Ubicaciones.aspx">
                           <i class="fa fa-dashboard"></i>
                           <span>Ubicaciones</span>
                       </a>
-                  </li>
+                  </li>--%>
                   <li class="sub-menu">
                       <a href="Eventos.aspx" >
                           <i class="fa fa-desktop"></i>

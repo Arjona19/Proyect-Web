@@ -12,7 +12,7 @@
         <div class="col-md-1">
            
                 
-                <asp:Button ID="CerrarSesion" CssClass="btn btn-primary fa fa-power-off" runat="server" Text="Cerrar Sesión" OnClick="CerrarSession" />
+<%--                <asp:Button ID="CerrarSesion" CssClass="btn btn-primary fa fa-power-off" runat="server" Text="Cerrar Sesión" OnClick="CerrarSession" />--%>
                 
             
         </div>

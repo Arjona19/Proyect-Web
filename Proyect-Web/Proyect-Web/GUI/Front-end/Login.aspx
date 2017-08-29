@@ -60,19 +60,19 @@
 		                </span>
 		            </label>
                        
-                        <asp:Button ID="Button1" Cssclass="btn btn-facebook" runat="server" CommandName="Login" Text="Inicio de sesión" ValidationGroup="Login1"  />
 		           
 		            <hr>
 		            
 		            <div class="login-social-link centered">
-		            <p>or you can sign in via your social network</p>
-		                <button class="btn btn-facebook" type="submit"><i class="fa fa-facebook"></i> Facebook</button>
-		                <button class="btn btn-twitter" type="submit"><i class="fa fa-twitter"></i> Twitter</button>
+		               <asp:Button ID="Button1" Cssclass="btn btn-facebook" runat="server" CommandName="Login" Text="Inicio de sesión" ValidationGroup="Login1"  />
+
+		                <a class="btn btn-facebook" href="EventosF.aspx">Volver</a> 
+<%--		                <button class="btn btn-twitter" type="submit"><i class="fa fa-twitter"></i> Twitter</button>--%>
 		            </div>
 		            <div class="registration">
-		                Don't have an account yet?<br/>
-		                <a class="" href="#">
-		                    Create an account
+		                No tienes una cuenta?<br/>
+		                <a class="" href="Registro.aspx">
+		                    Registrarme
 		                </a>
 		            </div>
 		
