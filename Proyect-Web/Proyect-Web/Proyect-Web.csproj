@@ -136,6 +136,7 @@
     <Content Include="FlatPicker\themes\material_orange.css" />
     <Content Include="FlatPicker\themes\material_red.css" />
     <Content Include="GUI\Back-end\Control.aspx" />
+    <Content Include="GUI\Back-end\ControlUsuarios.aspx" />
     <Content Include="GUI\Back-end\Eventos.aspx" />
     <Content Include="GUI\Back-end\HomeAdmin.aspx" />
     <Content Include="GUI\Back-end\Ubicaciones.aspx" />
@@ -175,6 +176,7 @@
     <Content Include="GUI\Front-end\vendor\popper\popper.min.js" />
     <Content Include="GUI\Front-end\Registro.aspx" />
     <Content Include="Img\subirfoto.jpg" />
+    <Content Include="Img\user.png" />
     <Content Include="MapPicker\locationpicker.jquery.js" />
     <Content Include="Menu\font-awesome.min.css" />
     <Content Include="Menu\jquery.min.js" />
@@ -273,6 +275,13 @@
     </Compile>
     <Compile Include="GUI\Back-end\Control.aspx.designer.cs">
       <DependentUpon>Control.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Back-end\ControlUsuarios.aspx.cs">
+      <DependentUpon>ControlUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Back-end\ControlUsuarios.aspx.designer.cs">
+      <DependentUpon>ControlUsuarios.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUI\Back-end\Eventos.aspx.cs">
       <DependentUpon>Eventos.aspx</DependentUpon>

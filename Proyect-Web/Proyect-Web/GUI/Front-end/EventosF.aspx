@@ -47,7 +47,7 @@
          <h2 class="text-center">Eventos</h2>
         <hr class="star-primary">
         <div class="centro">
-            <asp:DataList ID="DataList1" CssClass="centro" runat="server" RepeatColumns="3" HorizontalAlign="Center">
+            <asp:DataList ID="DataList1" CssClass="centro" runat="server" RepeatColumns="4" HorizontalAlign="Center">
                 <ItemTemplate>
                     <div class="Contenido" style="text-align:center;">
 

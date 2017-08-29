@@ -59,7 +59,7 @@ namespace Proyect_Web.GUI.Back_end
                 if (servicio.ActualizarAdmin(datos) == 1)
                 {
 
-                    Response.Write("<script language=javascript>alert('Datos Actualizados');</script>");
+                    Response.Write("<script language=javascript>alert('Datos Actualizados','Los cambios se notaran al iniciar sesion de nuevo');</script>");
 
                 }
                 else
@@ -82,7 +82,7 @@ namespace Proyect_Web.GUI.Back_end
             txtCorreo.Text = "";
             txtCorreo2.Text = "";
             txtCorreo3.Text = "";
-            Image1.ImageUrl = "../../Img/fr-05.jpg";
+            Image1.ImageUrl = "../../Img/user.png";
             txtTelefono.Text = "";
             txtSitioWeb.Text = "";
             txtUsuario.Text = "";

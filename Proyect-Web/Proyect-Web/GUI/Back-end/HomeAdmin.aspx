@@ -65,20 +65,33 @@
                     </div>
                 </div>
                 <div class="box-body ">
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="El dato es requerido" ControlToValidate="txtNombre"></asp:RequiredFieldValidator>
                     <asp:TextBox ID="txtNombre" CssClass="form-control input-lg" placeholder="Nombre"  runat="server"></asp:TextBox>
                   <br>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="El dato es requerido" ControlToValidate="txtCorreo"></asp:RequiredFieldValidator>
+
                      <asp:TextBox ID="txtCorreo" CssClass="form-control input-lg" placeholder="Correo" runat="server"></asp:TextBox>
                   <br>
+
                      <asp:TextBox ID="txtCorreo2" CssClass="form-control input-lg" placeholder="Segundo correo(opcional)" runat="server"></asp:TextBox>
                   <br>
+
                      <asp:TextBox ID="txtCorreo3" CssClass="form-control input-lg" placeholder="Tercer correo(opcional)" runat="server"></asp:TextBox>
                   <br>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="El dato es requerido" ControlToValidate="txtSitioWeb"></asp:RequiredFieldValidator>
+
                      <asp:TextBox ID="txtSitioWeb" CssClass="form-control input-lg" placeholder="Sitio Web" runat="server"></asp:TextBox>
                   <br>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="El dato es requerido" ControlToValidate="txtTelefono"></asp:RequiredFieldValidator>
+
                      <asp:TextBox ID="txtTelefono" CssClass="form-control input-lg" placeholder="Telefono" runat="server"></asp:TextBox>
                   <br>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="El dato es requerido" ControlToValidate="txtUsuario"></asp:RequiredFieldValidator>
+
                      <asp:TextBox ID="txtUsuario" CssClass="form-control input-lg" placeholder="Usuario" runat="server"></asp:TextBox>
                   <br>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="El dato es requerido" ControlToValidate="txtContraseña"></asp:RequiredFieldValidator>
+
                      <asp:TextBox ID="txtContraseña" CssClass="form-control input-lg" placeholder="Contraseña" runat="server"></asp:TextBox>
                   <br>
                    <asp:Button ID="btnLimpiar" CssClass="boton btn btn-block btn-default" runat="server" Text="Limpiar" OnClick="btnLimpiar_Click" />
@@ -92,10 +105,11 @@
                                 <div class="form-group">
                                     <div class="col-md-3"></div>
                                     <div class="col-md-6">
-                                    <asp:Image ID="Image1" Cssclass="img-circle group" ImageUrl="../../Img/fr-05.jpg"   style="width: 128px; height: 147px" runat="server" />
+                                    <asp:Image ID="Image1" Cssclass="img-circle group" ImageUrl="../../Img/user.png"   style="width: 128px; height: 147px" runat="server" />
                               
                                     <br />
                                     <br />
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="La imagen el requerida" ControlToValidate="fupfoto"></asp:RequiredFieldValidator>
                                     <label class="fileContainer btn btn-success">Seleccionar .. 
                                 <asp:FileUpload ID="fupfoto" runat="server" CssClass="inputfile" Width="100px" style="right: 0; top: 0" />
                               </label>

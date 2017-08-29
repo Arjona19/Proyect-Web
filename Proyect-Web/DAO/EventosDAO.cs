@@ -89,7 +89,18 @@ namespace DAO
 
             return TablaResultante;
         }
+        public DataTable VerUsuarios()
+        {
 
+            SqlCommand cmdComando = new SqlCommand();
+            cmdComando.CommandText = "SELECT * FROM Usuario WHERE IDTipoUsuario=2;"; // Sentencia SQL (BD) 
+            cmdComando.CommandType = CommandType.Text; // Tipo de comando(texto, procedimiento, etc..)
+
+            DataTable TablaResultante = con.EjecutarSentenciaSQL(cmdComando);
+
+
+            return TablaResultante;
+        }
         public ArrayList RecuperarCiudad()
         {
             sentenciaSQL = "Select * From Ubicaciones;";

@@ -232,6 +232,13 @@
               </a>
               
             </li>
+              <li class="treeview">
+              <a href="ControlUsuarios.aspx">
+                <i class="fa fa-files-o"></i>
+                <span>Usuarios</span>
+              </a>
+              
+            </li>
                     
                      
             
