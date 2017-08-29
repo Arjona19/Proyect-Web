@@ -226,9 +226,9 @@
               
             </li>
             <li class="treeview">
-              <a href="usuarios.aspx">
+              <a href="Control.aspx">
                 <i class="fa fa-files-o"></i>
-                <span>Usuarios</span>
+                <span>Control de Eventos</span>
               </a>
               
             </li>

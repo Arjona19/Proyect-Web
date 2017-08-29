@@ -61,15 +61,34 @@ namespace DAO
         public DataTable VerEvento()
         {
             
-            sentenciaSQL = "Select * from Evento";
+            sentenciaSQL = "Select * from Evento where Autorizado=1";
             SqlDataAdapter Tabla_BD = new SqlDataAdapter(sentenciaSQL, con.ConectarBD());
             DataTable Tabla_Virtual = new DataTable();
             Tabla_BD.Fill(Tabla_Virtual);
             return Tabla_Virtual;
         }
 
+        public bool ModificarEstatus(EventosBO oEventoBO, int estatus)
+        {
+            SqlCommand cmdComando = new SqlCommand();
+            cmdComando.CommandText = "UPDATE Evento set Autorizado=@estatus WHERE IDEvento=@ID";
+            cmdComando.Parameters.Add("@ID", SqlDbType.Int).Value = oEventoBO.IDevento;
+            cmdComando.Parameters.Add("@estatus", SqlDbType.Int).Value = estatus;
+
+            return con.EjecutarComandoSQL(cmdComando);
+        }
+        public DataTable Aprobar()
+        {
+
+            SqlCommand cmdComando = new SqlCommand();
+            cmdComando.CommandText = "SELECT * FROM Evento WHERE Autorizado=0;"; // Sentencia SQL (BD) 
+            cmdComando.CommandType = CommandType.Text; // Tipo de comando(texto, procedimiento, etc..)
+
+            DataTable TablaResultante = con.EjecutarSentenciaSQL(cmdComando);
 
 
+            return TablaResultante;
+        }
 
         public ArrayList RecuperarCiudad()
         {

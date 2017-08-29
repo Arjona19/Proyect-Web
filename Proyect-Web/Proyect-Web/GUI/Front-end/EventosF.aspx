@@ -45,7 +45,7 @@
      </style>
     <div class="content-fluid">
         <div class="centro">
-            <asp:DataList ID="DataList1" CssClass="centro" runat="server" RepeatColumns="3">
+            <asp:DataList ID="DataList1" CssClass="centro" runat="server" RepeatColumns="3" HorizontalAlign="Center">
                 <ItemTemplate>
                     <div class="Contenido" style="text-align:center;">
 
