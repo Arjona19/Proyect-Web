@@ -42,5 +42,11 @@ namespace Servicio
             estatus = Tipo_Ser.ActualizarSession(obj);
             return estatus;
         }
+        public int ActualizarAdmin(object obj)
+        {
+            int estatus = 0;
+            estatus = Tipo_Ser.ActualizarAdmin(obj);
+            return estatus;
+        }
     }
 }

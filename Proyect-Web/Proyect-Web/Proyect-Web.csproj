@@ -98,6 +98,15 @@
     <Content Include="assets\img\28-1.jpg" />
     <Content Include="assets\img\fondo.jpg" />
     <Content Include="assets\js\jquery-1.10.2.js" />
+    <Content Include="BackAdmin\AdminLTE.min.css" />
+    <Content Include="BackAdmin\app.min.js" />
+    <Content Include="BackAdmin\bootstrap.min.css" />
+    <Content Include="BackAdmin\bootstrap.min.js" />
+    <Content Include="BackAdmin\demo.js" />
+    <Content Include="BackAdmin\fastclick.min.js" />
+    <Content Include="BackAdmin\jQuery-2.1.4.min.js" />
+    <Content Include="BackAdmin\jquery.slimscroll.min.js" />
+    <Content Include="BackAdmin\_all-skins.min.css" />
     <Content Include="Carrusel\jquery-1.10.2.min.js" />
     <Content Include="Carrusel\jquery.mousewheel-3.0.6.min.js" />
     <Content Include="Carrusel\jquery.rondell.css" />
@@ -127,6 +136,7 @@
     <Content Include="FlatPicker\themes\material_orange.css" />
     <Content Include="FlatPicker\themes\material_red.css" />
     <Content Include="GUI\Back-end\Eventos.aspx" />
+    <Content Include="GUI\Back-end\HomeAdmin.aspx" />
     <Content Include="GUI\Back-end\Ubicaciones.aspx" />
     <Content Include="GUI\Front-end\css\freelancer.css" />
     <Content Include="GUI\Front-end\css\freelancer.min.css" />
@@ -220,8 +230,9 @@
     <Content Include="PruebaCarrusel.aspx" />
     <Content Include="Select\bootstrap-multiselect.css" />
     <Content Include="Select\bootstrap-multiselect.js" />
-    <Content Include="Site1.Master" />
     <Content Include="assets\js\jquery-1.10.2.min.map" />
+    <Content Include="GUI\Back-end\Admin.Master" />
+    <Content Include="BackAdmin\bootstrap.css.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -248,12 +259,26 @@
     <Content Include="GUI\Back-end\HomeOrg.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI\Back-end\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Back-end\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Back-end\Eventos.aspx.cs">
       <DependentUpon>Eventos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="GUI\Back-end\Eventos.aspx.designer.cs">
       <DependentUpon>Eventos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Back-end\HomeAdmin.aspx.cs">
+      <DependentUpon>HomeAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Back-end\HomeAdmin.aspx.designer.cs">
+      <DependentUpon>HomeAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUI\Back-end\Ubicaciones.aspx.cs">
       <DependentUpon>Ubicaciones.aspx</DependentUpon>
@@ -318,13 +343,6 @@
     </Compile>
     <Compile Include="Registro.aspx.designer.cs">
       <DependentUpon>Registro.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Site1.Master.cs">
-      <DependentUpon>Site1.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site1.Master.designer.cs">
-      <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
     <Compile Include="SwetAlert.aspx.cs">
       <DependentUpon>SwetAlert.aspx</DependentUpon>

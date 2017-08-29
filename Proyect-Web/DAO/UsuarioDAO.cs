@@ -39,6 +39,18 @@ namespace DAO
             sentenciaSQL = "UPDATE [dbo].[Usuario]SET [IDTipoUsuario] = '2',[Nombre] = '"+dat.Nombre+"',[Correo] = '"+dat.Correo+"',[SitioWeb] = '"+dat.SitioWeb+"',[Fotografia] = '"+dat.Fotografia+"',[Correo1] = '"+dat.Correo1+"',[Correo2] = '"+dat.Correo2+"',[Telefono] = '"+dat.Telefono+"' WHERE IDUsuario = '"+dat.IDUsuario+"'";
             return con.EjecutarSQL(sentenciaSQL);
         }
+        public int ActualizarAdmin(object obj)
+        {
+
+            UsuarioBO dat = (UsuarioBO)obj;
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.Connection = con.ConectarBD();
+
+            //sentenciaSQL = "Update Usuario set (IDTipoUsuario='"+dat.IDTipoUsuario+"',Nombre='"+dat.Nombre+"',Correo='"+dat.Correo+"',Telefono='"+dat.Telefono+"',SitioWeb='"+dat.SitioWeb+"',Usuario='"+dat.Usuario+"',Contraseña='"+dat.Contraseña+"',IDCiudad='"+dat.IDCiudad+"',Fotografia='"+dat.Fotografia+"' ) ";
+            sentenciaSQL = "UPDATE [dbo].[Usuario]SET [IDTipoUsuario] = '1',[Nombre] = '" + dat.Nombre + "',[Correo] = '" + dat.Correo + "',[SitioWeb] = '" + dat.SitioWeb + "',[Fotografia] = '" + dat.Fotografia + "',[Correo1] = '" + dat.Correo1 + "',[Correo2] = '" + dat.Correo2 + "',[Telefono] = '" + dat.Telefono + "' WHERE IDUsuario = '" + dat.IDUsuario + "'";
+            return con.EjecutarSQL(sentenciaSQL);
+        }
         public int ActualizarSession(object obj)
         {
             UsuarioBO dat = (UsuarioBO)obj;

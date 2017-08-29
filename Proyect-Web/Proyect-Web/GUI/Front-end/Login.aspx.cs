@@ -73,7 +73,7 @@ namespace Proyect_Web
                     Session["IDTipoUsuario"] = tipo;
                     if (tipo == 1)
                     {
-                        Response.Redirect("");
+                        Response.Redirect("~/GUI/Back-end/HomeAdmin.aspx");
                     }
                     else
                     {
