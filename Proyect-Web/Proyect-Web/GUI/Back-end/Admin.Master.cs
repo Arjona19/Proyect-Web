@@ -11,6 +11,10 @@ namespace Proyect_Web.GUI.Back_end
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["IDUsuario"]==null)
+            {
+                Response.Redirect("~/GUI/Front-end/EventosF.aspx");
+            }
             Nombre.Text = Session["Nombre"].ToString();
             Nombre1.Text = Session["Nombre"].ToString();
             Nombre3.Text = Session["Nombre"].ToString();

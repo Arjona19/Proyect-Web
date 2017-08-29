@@ -6,7 +6,7 @@
      <script src="../../SweetAlert/sweetalert.min.js"></script>
     <link href="../../Menu/font-awesome.min.css" rel="stylesheet" />
       <link href="../../SweetAlert/sweetalert.css" rel="stylesheet" />
-   
+      <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <div class="container-fluid">
         <div class="col-md-11"></div>
         <div class="col-md-1">

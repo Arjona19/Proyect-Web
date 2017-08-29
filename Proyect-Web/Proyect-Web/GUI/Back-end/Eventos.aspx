@@ -67,17 +67,19 @@
                   	  <h4 class="mb"><i class="fa fa-angle-right"></i>Agregar Eventos</h4>
                           <div class="col-md-6">
                               <div class="col-lg-2">
+
                                   <asp:TextBox ID="txtIDEvento" CssClass="form-control round-form" placeholder="ID" Enabled="false" runat="server"></asp:TextBox>
                               </div>
                               <div class="form-group">
                             <asp:TextBox  ID="txtNombreEvento" placeholder="Nombre del evento" runat="server" CssClass="form-control round-form"></asp:TextBox>
-                                
+                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="El dato es requerido" ControlToValidate="txtNombreEvento"></asp:RequiredFieldValidator>
+
                               
                           </div>
                               <div class="form-group">
                               <label class="sr-only" for="exampleInputEmail2">Descripcion del evento</label>
                                 <textarea id="txtDescripcion" class="form-control" placeholder="Descripcion del evento" runat="server" cols="20" rows="2"></textarea>
-                              
+                               <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="El dato es requerido" ControlToValidate="txtDescripcion"></asp:RequiredFieldValidator>
                                   
                           </div>
                               <div class="form-group">
@@ -86,6 +88,8 @@
                                 <span class="glyphicon glyphicon-time"></span>
                                 </span>
                                 <input type="text" id="HoraInicio" runat="server" class="form-control" value="" placeholder="Hora inicio"/>
+                                                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="El dato es requerido" ControlToValidate="HoraInicio"></asp:RequiredFieldValidator>
+
                                 </div>  
                           </div>
                              <div class="form-group">
@@ -93,7 +97,8 @@
                                 <div class="input-group clockpicker " data-autoclose="true">
                                 <span class="input-group-addon">
                                 <span class="glyphicon glyphicon-time"></span>
-                                </span>
+                                </span><asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="El dato es requerido" ControlToValidate="HoraFin"></asp:RequiredFieldValidator>
+
                                 <input type="text" id="HoraFin" runat="server" class="form-control" value="" placeholder="Hora Fin"/>
                                 </div>  
                             
@@ -103,7 +108,11 @@
                                   <label >Precio</label>
                                   
                                   <input type="number"  runat="server" class="form-control" min="0" max="100000" id="Precio" />
+                                                                                                      <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="El dato es requerido" ControlToValidate="Precio"></asp:RequiredFieldValidator>
+
                               </div>
+                                                                                                  <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="El dato es requerido" ControlToValidate="fupfoto"></asp:RequiredFieldValidator>
+
                               <label class="fileContainer btn btn-twitter">Seleccionar...
                                 <asp:FileUpload ID="fupfoto" runat="server" CssClass="inputfile " Width="100px" style="right: 0; top: 0" /> 
                               </label>
@@ -144,18 +153,20 @@
                              </div>
 <div class="col-md-6">
                     <div class="form-group">
+                                           <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="El dato es requerido" ControlToValidate="FechaInicio"></asp:RequiredFieldValidator>
                                   <input class="flatpickr form-control" id="FechaInicio" runat="server" data-date-format="d-m-Y" placeholder="Fecha inicio del Evento">
                            
                             
                           </div>
                               <div class="form-group">
                                  <input class="flatpickr form-control" id="FechaFin" runat="server" data-date-format="d-m-Y" placeholder="Fecha fin del Evento">
-
+                                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="El dato es requerido" ControlToValidate="FechaFin"></asp:RequiredFieldValidator>
                             
                           </div>
                              <div class="form-group">
                                
                         <label for="exampleFormControlSelect1">Categoria</label>
+                                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ErrorMessage="El dato es requerido" ControlToValidate="Categoria"></asp:RequiredFieldValidator>
                        <asp:DropDownList ID="Categoria" CssClass="form-control" runat="server" AutoPostBack="True">
                            <asp:ListItem Value="1">Danza</asp:ListItem>
                            <asp:ListItem Value="2">Teatro</asp:ListItem>

@@ -15,6 +15,7 @@ namespace Proyect_Web.GUI.Front_end
         EventosDAO objEvento = new EventosDAO();
         protected void Page_Load(object sender, EventArgs e)
         {
+            Session.Remove("IDUsuario");
             DataList1.DataSource = objEvento.VerEvento();
             DataList1.DataBind();
             if (!IsPostBack)
