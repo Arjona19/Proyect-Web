@@ -64,20 +64,25 @@
                   	  <h4 class="mb"><i class="fa fa-angle-right"></i>Perfil</h4>
                           <div class="col-md-8">
                               <div class="form-group">
+                                  <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Es necesario el dato" ControlToValidate="txtNombreUsuario"></asp:RequiredFieldValidator>
                             <asp:TextBox  ID="txtNombreUsuario" placeholder="Nombre(s)" runat="server" CssClass="form-control round-form"></asp:TextBox>
                                 
                               
                           </div>
                               <div class="form-group">
                               <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                              <asp:TextBox ID="txtSitioWeb" class="form-control round-form" placeholder="Sitio Web" runat="server"></asp:TextBox>
+                                                               <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Es necesario el dato" ControlToValidate="txtSitioWeb"></asp:RequiredFieldValidator>
+
+                                  <asp:TextBox ID="txtSitioWeb" class="form-control round-form" placeholder="Sitio Web" runat="server"></asp:TextBox>
                                   
                           </div>
                               <div class="form-group">
+                                                                                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Es necesario el dato" ControlToValidate="txtCorreo"></asp:RequiredFieldValidator>
+
                                   <asp:TextBox ID="txtCorreo" placeholder="Correo electronico" CssClass="form-control round-form" runat="server"></asp:TextBox>  
                           </div>
                              <div class="form-group">
-                        
+
                                  <asp:TextBox ID="txt2Correo" runat="server" CssClass="form-control round-form" placeholder="Segundo correo (opcional)"></asp:TextBox>
                             
                           </div>
@@ -88,7 +93,8 @@
                           </div>
                               <div class="form-group">
                                   <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control round-form" placeholder="Telefono"></asp:TextBox>
-                           
+                                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Es necesario el dato" ControlToValidate="txtTelefono"></asp:RequiredFieldValidator>
+
                             
                           </div>
                              
@@ -107,9 +113,13 @@
                               
                                     <br />
                                     <br />
+                                   
                                     <label class="fileContainer btn btn-success">Seleccionar .. 
                                 <asp:FileUpload ID="fupfoto" runat="server" CssClass="inputfile" Width="100px" style="right: 0; top: 0" />
-                              </label>
+
+                                        </label>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Es necesario el dato" ControlToValidate="fupfoto"></asp:RequiredFieldValidator>
+
                                     <script>
                                    var inputs = document.querySelectorAll('.inputfile');
                                    Array.prototype.forEach.call(inputs, function (input) {
