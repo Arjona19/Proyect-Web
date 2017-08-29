@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using DAO;
+using System.Collections;
 
 
 namespace Proyect_Web.GUI.Front_end
@@ -14,6 +15,8 @@ namespace Proyect_Web.GUI.Front_end
         EventosDAO objEvento = new EventosDAO();
         protected void Page_Load(object sender, EventArgs e)
         {
+            DataList1.DataSource = objEvento.VerEvento();
+            DataList1.DataBind();
             if (!IsPostBack)
             {
                 MostrarCAtalogo();

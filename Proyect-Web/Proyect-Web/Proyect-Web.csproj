@@ -108,6 +108,14 @@
     <Content Include="ClockPicker\clockpicker.css" />
     <Content Include="ClockPicker\clockpicker.js" />
     <Content Include="ClockPicker\standalone.css" />
+    <Content Include="dist\css\images\blank.gif" />
+    <Content Include="dist\css\images\closedhand.cur" />
+    <Content Include="dist\css\images\openhand.cur" />
+    <Content Include="dist\css\slider-pro.css" />
+    <Content Include="dist\css\slider-pro.min.css" />
+    <Content Include="dist\js\jquery-1.11.0.min.js" />
+    <Content Include="dist\js\jquery.sliderPro.js" />
+    <Content Include="dist\js\jquery.sliderPro.min.js" />
     <Content Include="FlatPicker\flatpickr.min.css" />
     <Content Include="FlatPicker\flatpickr.min.js" />
     <Content Include="FlatPicker\themes\airbnb.css" />
@@ -209,6 +217,7 @@
     <Content Include="GUI\Front-end\vendor\font-awesome\scss\_stacked.scss" />
     <Content Include="GUI\Front-end\vendor\font-awesome\scss\_variables.scss" />
     <Content Include="Index.Master" />
+    <Content Include="PruebaCarrusel.aspx" />
     <Content Include="Select\bootstrap-multiselect.css" />
     <Content Include="Select\bootstrap-multiselect.js" />
     <Content Include="Site1.Master" />
@@ -295,6 +304,13 @@
     </Compile>
     <Compile Include="GUI\Back-end\HomeOrg.aspx.designer.cs">
       <DependentUpon>HomeOrg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PruebaCarrusel.aspx.cs">
+      <DependentUpon>PruebaCarrusel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PruebaCarrusel.aspx.designer.cs">
+      <DependentUpon>PruebaCarrusel.aspx</DependentUpon>
     </Compile>
     <Compile Include="Registro.aspx.cs">
       <DependentUpon>Registro.aspx</DependentUpon>

@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Proyect_Web
 {
-    public partial class Site1 : System.Web.UI.MasterPage
+    public partial class PruebaCarrusel : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
