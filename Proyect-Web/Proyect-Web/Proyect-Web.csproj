@@ -175,7 +175,10 @@
     <Content Include="GUI\Front-end\vendor\popper\popper.js" />
     <Content Include="GUI\Front-end\vendor\popper\popper.min.js" />
     <Content Include="GUI\Front-end\Registro.aspx" />
+    <Content Include="Img\Conciertos.jpg" />
+    <Content Include="Img\franco.jpg" />
     <Content Include="Img\subirfoto.jpg" />
+    <Content Include="Img\Teatro.jpg" />
     <Content Include="Img\user.png" />
     <Content Include="MapPicker\locationpicker.jquery.js" />
     <Content Include="Menu\font-awesome.min.css" />

@@ -15,12 +15,15 @@ namespace Proyect_Web.GUI.Back_end
             {
                 Response.Redirect("~/GUI/Front-end/EventosF.aspx");
             }
-            if (Session["Fotografia"]==null)
+            if (Session["Fotografia"].ToString()=="")
             {
                 Image1.ImageUrl = "../../Img/user.png";
                 Image2.ImageUrl = "../../Img/user.png";
                 Image3.ImageUrl = "../../Img/user.png";
                 Image4.ImageUrl = "../../Img/user.png";
+                Nombre.Text = Session["Nombre"].ToString();
+                Nombre1.Text = Session["Nombre"].ToString();
+                Nombre3.Text = Session["Nombre"].ToString();
             }
             else
             {

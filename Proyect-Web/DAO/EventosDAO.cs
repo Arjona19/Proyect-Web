@@ -77,6 +77,15 @@ namespace DAO
 
             return con.EjecutarComandoSQL(cmdComando);
         }
+        public bool ModificarTipo(EventosBO oEventoBO, int estatus)
+        {
+            SqlCommand cmdComando = new SqlCommand();
+            cmdComando.CommandText = "UPDATE Usuario set IDTipoUsuario=@estatus WHERE IDUsuario=@ID";
+            cmdComando.Parameters.Add("@ID", SqlDbType.Int).Value = oEventoBO.IDevento;
+            cmdComando.Parameters.Add("@estatus", SqlDbType.Int).Value = estatus;
+
+            return con.EjecutarComandoSQL(cmdComando);
+        }
         public DataTable Aprobar()
         {
 

@@ -38,7 +38,7 @@ namespace Proyect_Web.GUI.Back_end
                 EventosDAO oEventoDAO = new EventosDAO();
                 EventosBO oEventoBO = new EventosBO();
                 oEventoBO.IDevento = id;
-                oEventoDAO.ModificarEstatus(oEventoBO, 1);
+                oEventoDAO.ModificarTipo(oEventoBO, 1);
                 VerUsuarios();
             }
         }
