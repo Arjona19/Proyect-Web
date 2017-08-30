@@ -69,10 +69,34 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
+        <div class="clearfix"></div>
 </div>
+ 
+	
     <div class="content-fluid">
+
          <h2 class="text-center">Eventos</h2>
         <hr class="star-primary">
+
+    	<form onsubmit="submitFn(this, event);">
+            <div class="search-wrapper">
+                <div class="input-holder">
+                    <input type="text" id="search" class="search-input" placeholder="Busca tu evento" />
+                    <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
+                </div>
+                <span class="close" onclick="searchToggle(this, event);"></span>
+                <div class="result-container">
+
+                </div>
+            </div>
+        </form>
+
+	
+
+           <link href="../../Search/Search.css" rel="stylesheet" />
+    <script src="../../Search/Search.js"></script>
+	<script src="http://libs.useso.com/js/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
         <div class="centro">
             <asp:DataList ID="DataList1" CssClass="centro" runat="server" RepeatColumns="4" HorizontalAlign="Center">
                 <ItemTemplate>

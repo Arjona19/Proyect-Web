@@ -246,6 +246,13 @@
               </a>
               
             </li>
+               <li class="treeview">
+              <a href="Chat.aspx">
+                <i class="fa fa-files-o"></i>
+                <span>Mensajes</span>
+              </a>
+              
+            </li>
                     
                      
             

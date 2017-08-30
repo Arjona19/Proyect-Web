@@ -135,6 +135,7 @@
     <Content Include="FlatPicker\themes\material_green.css" />
     <Content Include="FlatPicker\themes\material_orange.css" />
     <Content Include="FlatPicker\themes\material_red.css" />
+    <Content Include="GUI\Back-end\Chat.aspx" />
     <Content Include="GUI\Back-end\Control.aspx" />
     <Content Include="GUI\Back-end\ControlUsuarios.aspx" />
     <Content Include="GUI\Back-end\Eventos.aspx" />
@@ -238,6 +239,8 @@
     <Content Include="Index.Master" />
     <Content Include="PruebaCarrusel.aspx" />
     <Content Include="GUI\Back-end\ReporteUsu.aspx" />
+    <Content Include="Search\Search.css" />
+    <Content Include="Search\Search.js" />
     <Content Include="Select\bootstrap-multiselect.css" />
     <Content Include="Select\bootstrap-multiselect.js" />
     <Content Include="assets\js\jquery-1.10.2.min.map" />
@@ -276,6 +279,13 @@
     </Compile>
     <Compile Include="GUI\Back-end\Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Back-end\Chat.aspx.cs">
+      <DependentUpon>Chat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Back-end\Chat.aspx.designer.cs">
+      <DependentUpon>Chat.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUI\Back-end\Control.aspx.cs">
       <DependentUpon>Control.aspx</DependentUpon>

@@ -2,6 +2,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="container-fluid">
+         <div class="box box-success ">
+                             <asp:Button ID="BackUp" CssClass="btn btn-block btn-success btn-lg" runat="server" Text="Copia de Seguridad" OnClick="BackUp_Click"  />
+</div>
+        </div>
       <script src="js/jspdf.debug.js"></script>
     <script src="js/jquery-2.1.4.min.js"></script>
     <div id="Reporte1" class="box">
@@ -54,6 +59,7 @@
        
     </asp:GridView>
               </div>
+    
     <script>
            function DescargarPDF(ContenidoID, nombre) {
 
