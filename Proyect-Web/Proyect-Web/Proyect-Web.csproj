@@ -139,6 +139,9 @@
     <Content Include="GUI\Back-end\ControlUsuarios.aspx" />
     <Content Include="GUI\Back-end\Eventos.aspx" />
     <Content Include="GUI\Back-end\HomeAdmin.aspx" />
+    <Content Include="GUI\Back-end\js\jquery-2.1.4.min.js" />
+    <Content Include="GUI\Back-end\js\jspdf.debug.js" />
+    <Content Include="GUI\Back-end\Reportes.aspx" />
     <Content Include="GUI\Back-end\Ubicaciones.aspx" />
     <Content Include="GUI\Front-end\css\freelancer.css" />
     <Content Include="GUI\Front-end\css\freelancer.min.css" />
@@ -234,6 +237,7 @@
     <Content Include="GUI\Front-end\vendor\font-awesome\scss\_variables.scss" />
     <Content Include="Index.Master" />
     <Content Include="PruebaCarrusel.aspx" />
+    <Content Include="GUI\Back-end\ReporteUsu.aspx" />
     <Content Include="Select\bootstrap-multiselect.css" />
     <Content Include="Select\bootstrap-multiselect.js" />
     <Content Include="assets\js\jquery-1.10.2.min.map" />
@@ -261,6 +265,7 @@
     <Content Include="SweetAlert\sweetalert.min.js" />
     <Content Include="SweetAlert\twitter.css" />
     <Content Include="SwetAlert.aspx" />
+    <Content Include="vermas.aspx" />
     <Content Include="Web.config" />
     <Content Include="GUI\Back-end\HomeOrg.aspx" />
   </ItemGroup>
@@ -299,6 +304,13 @@
     </Compile>
     <Compile Include="GUI\Back-end\HomeAdmin.aspx.designer.cs">
       <DependentUpon>HomeAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Back-end\Reportes.aspx.cs">
+      <DependentUpon>Reportes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Back-end\Reportes.aspx.designer.cs">
+      <DependentUpon>Reportes.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUI\Back-end\Ubicaciones.aspx.cs">
       <DependentUpon>Ubicaciones.aspx</DependentUpon>
@@ -364,12 +376,26 @@
     <Compile Include="Registro.aspx.designer.cs">
       <DependentUpon>Registro.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Back-end\ReporteUsu.aspx.cs">
+      <DependentUpon>ReporteUsu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Back-end\ReporteUsu.aspx.designer.cs">
+      <DependentUpon>ReporteUsu.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SwetAlert.aspx.cs">
       <DependentUpon>SwetAlert.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="SwetAlert.aspx.designer.cs">
       <DependentUpon>SwetAlert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vermas.aspx.cs">
+      <DependentUpon>vermas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vermas.aspx.designer.cs">
+      <DependentUpon>vermas.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

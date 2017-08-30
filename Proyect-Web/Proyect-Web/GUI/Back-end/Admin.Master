@@ -235,7 +235,14 @@
               <li class="treeview">
               <a href="ControlUsuarios.aspx">
                 <i class="fa fa-files-o"></i>
-                <span>Usuarios</span>
+                <span>Control de Usuarios</span>
+              </a>
+              
+            </li>
+                <li class="treeview">
+              <a href="Reportes.aspx">
+                <i class="fa fa-files-o"></i>
+                <span>Reportes</span>
               </a>
               
             </li>

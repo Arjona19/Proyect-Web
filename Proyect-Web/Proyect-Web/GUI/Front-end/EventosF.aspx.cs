@@ -32,5 +32,10 @@ namespace Proyect_Web.GUI.Front_end
             DataList1.DataBind();
 
         }
+
+        protected void Button1_Click1(object sender, EventArgs e)
+        {
+            Response.Redirect("../../vermas.aspx?cultur="+Eval("IDEvento")+"");
+        }
     }
 }

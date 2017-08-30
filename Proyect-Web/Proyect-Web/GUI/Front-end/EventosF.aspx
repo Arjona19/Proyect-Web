@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Index.Master" AutoEventWireup="true" CodeBehind="EventosF.aspx.cs" Inherits="Proyect_Web.GUI.Front_end.EventosF" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Index.Master" AutoEventWireup="true" CodeBehind="EventosF.aspx.cs" Inherits="Proyect_Web.GUI.Front_end.EventosF"   %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <br />
     <br />
@@ -83,8 +83,11 @@
              <br />
                         
              <h4><asp:Label ID="Label1" Cssclass="Nombre" runat="server" Text='<%#Eval("Nombre") %>'></asp:Label></h4>
+                                    <br />
              <br />
-             <br />
+                        <a class="btn btn-info" href="../../vermas.aspx?cultur=<%# Eval("IDEvento") %>">Ver Mas </a>
+    
+             <%-- <a href="../../vermas.aspx?cultur='<%#Eval("IDEvento") %>'"> Mas</a>--%>
 
 
              

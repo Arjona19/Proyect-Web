@@ -67,7 +67,15 @@ namespace DAO
             Tabla_BD.Fill(Tabla_Virtual);
             return Tabla_Virtual;
         }
+        public DataTable ReporteUsuario()
+        {
 
+            sentenciaSQL = "Select * from Usuario";
+            SqlDataAdapter Tabla_BD = new SqlDataAdapter(sentenciaSQL, con.ConectarBD());
+            DataTable Tabla_Virtual = new DataTable();
+            Tabla_BD.Fill(Tabla_Virtual);
+            return Tabla_Virtual;
+        }
         public bool ModificarEstatus(EventosBO oEventoBO, int estatus)
         {
             SqlCommand cmdComando = new SqlCommand();
