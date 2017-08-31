@@ -20,10 +20,10 @@ namespace Proyect_Web.GUI.Back_end
         EventosDAO dao = new EventosDAO();
         EventosBO bo = new EventosBO();
         protected void Page_Load(object sender, EventArgs e)
-        {ArrayList ListUbic = dao.RecuperarCiudad();
+        {
 
-            dblUbicacion.DataSource = ListUbic;
-            dblUbicacion.DataBind();
+            
+            
             
             if (!IsPostBack)
             {

@@ -28,7 +28,7 @@
               </div>
     <div id="Reporte2" class="box">
                 <div class="box-header">
-                  <h3 class="box-title">Eventos Aprobados</h3>  <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                  <h3 class="box-title">Eventos Rechazados</h3>  <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
                   <div class="box-tools">
                     <div class="input-group">
                       <div class="input-group-btn">
@@ -44,12 +44,12 @@
               </div>
     <div id="Reporte3" class="box">
                 <div class="box-header">
-                  <h3 class="box-title">Eventos Rechazados</h3>  <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+                  <h3 class="box-title">Eventos Aprobados</h3>  <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
                   <div class="box-tools">
                     <div class="input-group">
                       
                       <div class="input-group-btn">
-                          <input type="button" class="btn btn-facebook " value="Descargar Reporte" onclick="DescargarPDF('Reporte3', 'Reporte de Eventos Rechazados')" />
+                          <input type="button" id="Descargar" runat="server" class="btn btn-facebook" value="Descargar Reporte" onclick="DescargarPDF('Reporte3', 'Reporte de Eventos Rechazados')" />
                         
                       </div>
                     </div>

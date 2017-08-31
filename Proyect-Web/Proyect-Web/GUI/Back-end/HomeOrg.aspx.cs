@@ -31,23 +31,17 @@ namespace Proyect_Web
         protected void Page_Load(object sender, EventArgs e)
         {
             string Foto = Session["Fotografia"].ToString();
-          
-                if (Foto == "")
-                {
-                    LblContr.Text = "No asignado";
-                    LblCorreo.Text = "No asignado";
-                    LblCorreo2.Text = "No asignado";
-                    LblNombre.Text = "No asignado";
-                    LblSitio.Text = "No asignado";
-                    LblTel.Text = "No asignado";
-                    LblUs.Text = "No asignado";
-                    
-
-                    Image1.ImageUrl = "~/Img/fr-05.jpg";
-                    Perfil1.ImageUrl = "~/Img/fr-05.jpg";
+            if (Foto=="")
+            {
+                Image1.ImageUrl = "~/Img/user.png";
+                Perfil1.ImageUrl = "~/Img/user.png";
             }
             else
             {
+                Perfil1.ImageUrl = "~/Img/" + Session["Fotografia"];
+                Image1.ImageUrl = "~/Img/" + Session["Fotografia"];
+            }
+               
             LblContr.Text = Session["Contraseña"].ToString();
             LblCorreo.Text = Session["Correo"].ToString();
             LblCorreo2.Text = Session["Correo2"].ToString();
@@ -55,9 +49,8 @@ namespace Proyect_Web
             LblSitio.Text = Session["SitioWeb"].ToString();
             LblTel.Text = Session["Telefono"].ToString();
             LblUs.Text = Session["Usuario"].ToString();
-            Perfil1.ImageUrl = "~/Img/" + Session["Fotografia"];
-            Image1.ImageUrl = "~/Img/" + Session["Fotografia"];
-            }
+           
+            
                 //if (fupfoto.HasFile)
                 //{
                 //    NombreImagen = Path.GetFileName(fupfoto.PostedFile.FileName);
@@ -174,12 +167,12 @@ namespace Proyect_Web
                 if (  servicio.ActualizarR(datos)== 1)
                 {
 
-                    Response.Write("< script language=javascript> swal('Datos Actualizados', 'Contenido del mensaje', 'success')</ script >");
+                    Response.Write("< script language=javascript> alert('Datos Actualizados')</ script >");
 
                 }
                 else
                 {
-                    Response.Write("  <script language=javascript>swal('Algo salio mal', 'Contenido del mensaje', 'success');</ script > ");
+                    Response.Write("  <script language=javascript>alert('Algo salio mal');</ script > ");
                 }
                 //Actualizar();
 
@@ -193,7 +186,7 @@ namespace Proyect_Web
         }
         public void Ver(object sernder, EventArgs e)
         {
-            Response.Write("< script language=javascript> swal('Algo salio mal', 'Contenido del mensaje', 'success')</ script >");
+            Response.Write("< script language=javascript>alert('Algo salio mal')</ script >");
         }
         public void Actualizar()
         {

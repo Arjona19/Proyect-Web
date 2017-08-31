@@ -150,9 +150,7 @@
                           <br />
                              </div>
                          
-                          <label class="fileContainer btn btn-success">Actualizar
-                               <input id="boton" runat="server" Cssclass="btn btn-theme" type="button" onclick="PruebaAlert();" />
-                              </label>
+                          
                           
                           <asp:Button ID="btnModificar" runat="server" Text="Modificar" class="btn btn-theme" type="submit" OnClick="btnModificar_Click "/>
                            <script>

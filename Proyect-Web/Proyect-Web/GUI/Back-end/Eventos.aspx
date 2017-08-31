@@ -178,7 +178,8 @@
   </div>
                               <div class="form-group">
                                    <label for="exampleFormControlSelect1">Ubicación</label>
-                                   <asp:DropDownList ID="dblUbicacion" CssClass="form-control" runat="server"></asp:DropDownList>
+                                   <asp:DropDownList ID="dblUbicacion" CssClass="form-control" runat="server" DataSourceID="SqlDataSource1" DataTextField="Ubicacion" DataValueField="Ubicacion"></asp:DropDownList>
+                                   <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:EventosProyectoConnectionString %>" SelectCommand="SELECT [Ubicacion] FROM [Ubicaciones]"></asp:SqlDataSource>
                               </div>
                               <div class="form-group">
                                   <button type="button" data-toggle="modal" data-target="#ModalMap" class="btn btn-default">

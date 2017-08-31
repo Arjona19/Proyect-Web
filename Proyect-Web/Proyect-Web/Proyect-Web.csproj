@@ -135,6 +135,7 @@
     <Content Include="FlatPicker\themes\material_green.css" />
     <Content Include="FlatPicker\themes\material_orange.css" />
     <Content Include="FlatPicker\themes\material_red.css" />
+    <Content Include="GoogleMapWeb.aspx" />
     <Content Include="GUI\Back-end\Chat.aspx" />
     <Content Include="GUI\Back-end\Control.aspx" />
     <Content Include="GUI\Back-end\ControlUsuarios.aspx" />
@@ -273,6 +274,13 @@
     <Content Include="GUI\Back-end\HomeOrg.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GoogleMapWeb.aspx.cs">
+      <DependentUpon>GoogleMapWeb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GoogleMapWeb.aspx.designer.cs">
+      <DependentUpon>GoogleMapWeb.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Back-end\Admin.Master.cs">
       <DependentUpon>Admin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

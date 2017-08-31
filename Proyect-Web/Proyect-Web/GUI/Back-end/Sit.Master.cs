@@ -11,13 +11,21 @@ namespace Proyect_Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["Fotografia"] == null || Session["Nombre"]==null)
+            if (Session["IDUsuario"].ToString()==null)
             {   Response.Redirect("../Front-end/Registro.aspx");
                 Response.Write("<script language=javascript>alert('No has iniciado sesion');</script>");
                 
             }
-            Perfil.ImageUrl = "~/Img/" + Session["Fotografia"].ToString();
-            Label1.Text = Session["Nombre"].ToString();
+            if (Session["Fotografia"].ToString()=="")
+            {
+                Perfil.ImageUrl = "~/Img/user.png";
+            }
+            else
+            {
+            Perfil.ImageUrl = "~/Img" + Session["Fotografia"].ToString();
+            
+            }
+         Label1.Text = Session["Nombre"].ToString();
 
         }
         public void CerrarSession(Object sender, EventArgs e)

@@ -18,6 +18,7 @@ namespace Proyect_Web.GUI.Back_end
             Label1.Text = DateTime.Now.ToString();
             Label2.Text = DateTime.Now.ToString();
             EventosDAO d = new EventosDAO();
+          
             GridView1.DataSource = d.VerUsuarios();
             GridView1.DataBind();
             GridView2.DataSource = d.Aprobar();

@@ -118,6 +118,19 @@ namespace DAO
 
             return TablaResultante;
         }
+        public DataTable VerMas(object obj)
+        {
+            EventosBO dat = (EventosBO)obj;
+            SqlCommand cmdComando = new SqlCommand();
+            cmdComando.CommandText = "SELECT * FROM Evento WHERE IDEvento='"+dat.IDevento+"' ;"; // Sentencia SQL (BD) 
+            cmdComando.CommandType = CommandType.Text; // Tipo de comando(texto, procedimiento, etc..)
+
+            DataTable TablaResultante = con.EjecutarSentenciaSQL(cmdComando);
+
+
+            return TablaResultante;
+        }
+
         public ArrayList RecuperarCiudad()
         {
             sentenciaSQL = "Select * From Ubicaciones;";
@@ -127,6 +140,7 @@ namespace DAO
             ArrayList aListCiudad = new ArrayList();
             foreach (DataRow Row in Tabla_Virtual.Rows)
             {
+
                 UsuarioBO cBO = new UsuarioBO { IDCiudad = (int)Row[0], NombreC = (string)Row[1] };
                 aListCiudad.Add(cBO);
 
