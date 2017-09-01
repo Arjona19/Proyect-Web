@@ -145,6 +145,7 @@
     <Content Include="GUI\Back-end\js\jspdf.debug.js" />
     <Content Include="GUI\Back-end\Reportes.aspx" />
     <Content Include="GUI\Back-end\Ubicaciones.aspx" />
+    <Content Include="GUI\Front-end\css\bootstrap.min.css" />
     <Content Include="GUI\Front-end\css\freelancer.css" />
     <Content Include="GUI\Front-end\css\freelancer.min.css" />
     <Content Include="GUI\Front-end\EventosF.aspx" />
@@ -180,6 +181,7 @@
     <Content Include="GUI\Front-end\vendor\popper\popper.js" />
     <Content Include="GUI\Front-end\vendor\popper\popper.min.js" />
     <Content Include="GUI\Front-end\Registro.aspx" />
+    <Content Include="GUI\Front-end\VerEvento.aspx" />
     <Content Include="Img\Conciertos.jpg" />
     <Content Include="Img\franco.jpg" />
     <Content Include="Img\subirfoto.jpg" />
@@ -350,6 +352,13 @@
     </Compile>
     <Compile Include="GUI\Front-end\Registro.aspx.designer.cs">
       <DependentUpon>Registro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Front-end\VerEvento.aspx.cs">
+      <DependentUpon>VerEvento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Front-end\VerEvento.aspx.designer.cs">
+      <DependentUpon>VerEvento.aspx</DependentUpon>
     </Compile>
     <Compile Include="Index.Master.cs">
       <DependentUpon>Index.Master</DependentUpon>

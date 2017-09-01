@@ -111,8 +111,8 @@
                                     <br />
              <br />
                         <%--<a class="btn btn-info" href="../../vermas.aspx?go=<%# Eval("IDEvento") %>">Ver Mas </a>--%>
-    
-                         <a href="../../vermas.aspx?go=<%#Eval("IDEvento") %>"> Mas</a>
+                        
+                         <a class="btn btn-info" href="VerEvento.aspx?go=<%#Eval("IDEvento") %>">Ver Más</a>
 
 
              
