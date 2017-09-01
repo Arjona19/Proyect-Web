@@ -11,20 +11,32 @@ namespace Proyect_Web
 {
     public partial class vermas : System.Web.UI.Page
     {
-       
+        EventosBO datos = new EventosBO();
+        EventosDAO objEvento = new EventosDAO();
+        int id = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
-           
-            EventosBO bo = new EventosBO();
-            EventosDAO dao = new EventosDAO();
+            id = Convert.ToInt32(Request.QueryString["go"]);
+            if (!IsPostBack)
+            {
+
+
+                // MostrarCAtalogo();
+                cargartext();
+
+            }
            
 
-           // bo.IDevento = Convert.ToInt32(Request.QueryString["idEve"]);
-            //bo.IDUsuario = Convert.ToInt32(Session["IDUsuario"]);
-            DataList1.DataSource = dao.VerMas(bo);
-            DataList1.DataBind();
+            
         }
 
-        
+        public void cargartext()
+        {
+            Label1.Text = objEvento.VerMas(id).Rows[0]["Nombre"].ToString();
+            Label2.Text = objEvento.VerMas(id).Rows[0]["Descripcion"].ToString();
+            Image1.ImageUrl = "~/Img/" + objEvento.VerMas(id).Rows[0]["FotoEvento"].ToString();
+        }
+
+
     }
 }

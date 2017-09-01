@@ -110,9 +110,9 @@
               <h4><asp:Label ID="Label2" Cssclass="Nombre" runat="server" Text='<%#Eval("IDEvento") %>'></asp:Label></h4>
                                     <br />
              <br />
-                        <a class="btn btn-info" href="../../vermas.aspx?IdEven=<%# Eval("IDEvento") %>">Ver Mas </a>
+                        <%--<a class="btn btn-info" href="../../vermas.aspx?go=<%# Eval("IDEvento") %>">Ver Mas </a>--%>
     
-                        <%--<a href="../../vermas.aspx?idEve='<%#Eval("IDEvento") %>'"> Mas</a>--%>
+                         <a href="../../vermas.aspx?go=<%#Eval("IDEvento") %>"> Mas</a>
 
 
              

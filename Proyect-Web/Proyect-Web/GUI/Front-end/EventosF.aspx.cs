@@ -36,13 +36,13 @@ namespace Proyect_Web.GUI.Front_end
 
         }
 
-        protected void Button1_Click1(object sender, EventArgs e)
-        {
+        //protected void Button1_Click1(object sender, EventArgs e)
+        //{
             
             
-            //Response.Redirect("../../vermas.aspx?idEve=" + Eval("IDEvento") + "");
-            BO.IDevento = Convert.ToInt32(Request.QueryString["idEve"]);
+        //    //Response.Redirect("../../vermas.aspx?idEve=" + Eval("IDEvento") + "");
+        //    BO.IDevento = Convert.ToInt32(Request.QueryString["idEve"]);
 
-        }
+        //}
     }
 }

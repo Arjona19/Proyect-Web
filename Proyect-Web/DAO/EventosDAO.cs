@@ -118,17 +118,14 @@ namespace DAO
 
             return TablaResultante;
         }
-        public DataTable VerMas(object obj)
+        public DataTable VerMas(int id)
         {
-            EventosBO dat = (EventosBO)obj;
-            SqlCommand cmdComando = new SqlCommand();
-            cmdComando.CommandText = "SELECT * FROM Evento WHERE IDEvento='"+dat.IDevento+"' ;"; // Sentencia SQL (BD) 
-            cmdComando.CommandType = CommandType.Text; // Tipo de comando(texto, procedimiento, etc..)
 
-            DataTable TablaResultante = con.EjecutarSentenciaSQL(cmdComando);
-
-
-            return TablaResultante;
+            sentenciaSQL = "Select * from Evento where IDEvento='" + id + "' ";
+            SqlDataAdapter Tabla_BD = new SqlDataAdapter(sentenciaSQL, con.ConectarBD());
+            DataTable Tabla_Virtual = new DataTable();
+            Tabla_BD.Fill(Tabla_Virtual);
+            return Tabla_Virtual;
         }
 
         public ArrayList RecuperarCiudad()
