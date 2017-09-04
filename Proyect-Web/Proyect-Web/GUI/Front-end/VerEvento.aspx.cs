@@ -36,7 +36,7 @@ namespace Proyect_Web.GUI.Front_end
             FechaInicio.Text = objEvento.VerMas(id).Rows[0]["Fecha Inicio"].ToString();
             HoraInicio.Text = objEvento.VerMas(id).Rows[0]["HoraInicio"].ToString();
             HoraFinal.Text = objEvento.VerMas(id).Rows[0]["HoraFin"].ToString();
-
+            Ubicacion.Text = objEvento.VerMas(id).Rows[0]["Ubicacion"].ToString();
             Image1.ImageUrl = "~/Img/" + objEvento.VerMas(id).Rows[0]["FotoEvento"].ToString();
         }
     }

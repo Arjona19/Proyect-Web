@@ -44,6 +44,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -77,6 +81,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -145,6 +150,7 @@
     <Content Include="GUI\Back-end\js\jspdf.debug.js" />
     <Content Include="GUI\Back-end\Reportes.aspx" />
     <Content Include="GUI\Back-end\Ubicaciones.aspx" />
+    <Content Include="GUI\Back-end\WebForm1.aspx" />
     <Content Include="GUI\Front-end\css\bootstrap.min.css" />
     <Content Include="GUI\Front-end\css\freelancer.css" />
     <Content Include="GUI\Front-end\css\freelancer.min.css" />
@@ -241,7 +247,7 @@
     <Content Include="GUI\Front-end\vendor\font-awesome\scss\_variables.scss" />
     <Content Include="Index.Master" />
     <Content Include="PruebaCarrusel.aspx" />
-    <Content Include="GUI\Back-end\ReporteUsu.aspx" />
+    <Content Include="ReporteUsuarios.aspx" />
     <Content Include="Search\Search.css" />
     <Content Include="Search\Search.js" />
     <Content Include="Select\bootstrap-multiselect.css" />
@@ -249,6 +255,28 @@
     <Content Include="assets\js\jquery-1.10.2.min.map" />
     <Content Include="GUI\Back-end\Admin.Master" />
     <Content Include="BackAdmin\bootstrap.css.map" />
+    <Content Include="DataSetUsuarios.xsc">
+      <DependentUpon>DataSetUsuarios.xsd</DependentUpon>
+    </Content>
+    <None Include="DataSetUsuarios.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetUsuarios.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DataSetUsuarios.xss">
+      <DependentUpon>DataSetUsuarios.xsd</DependentUpon>
+    </Content>
+    <Content Include="EventosProyectoDataSet1.xsc">
+      <DependentUpon>EventosProyectoDataSet1.xsd</DependentUpon>
+    </Content>
+    <None Include="EventosProyectoDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EventosProyectoDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="EventosProyectoDataSet1.xss">
+      <DependentUpon>EventosProyectoDataSet1.xsd</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -276,6 +304,28 @@
     <Content Include="GUI\Back-end\HomeOrg.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSetUsuarios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetUsuarios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EventosProyectoDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EventosProyectoDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="GoogleMapWeb.aspx.cs">
       <DependentUpon>GoogleMapWeb.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -338,6 +388,13 @@
     </Compile>
     <Compile Include="GUI\Back-end\Ubicaciones.aspx.designer.cs">
       <DependentUpon>Ubicaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Back-end\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Back-end\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUI\Front-end\EventosF.aspx.cs">
       <DependentUpon>EventosF.aspx</DependentUpon>
@@ -403,12 +460,12 @@
     <Compile Include="Registro.aspx.designer.cs">
       <DependentUpon>Registro.aspx</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Back-end\ReporteUsu.aspx.cs">
-      <DependentUpon>ReporteUsu.aspx</DependentUpon>
+    <Compile Include="ReporteUsuarios.aspx.cs">
+      <DependentUpon>ReporteUsuarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="GUI\Back-end\ReporteUsu.aspx.designer.cs">
-      <DependentUpon>ReporteUsu.aspx</DependentUpon>
+    <Compile Include="ReporteUsuarios.aspx.designer.cs">
+      <DependentUpon>ReporteUsuarios.aspx</DependentUpon>
     </Compile>
     <Compile Include="SwetAlert.aspx.cs">
       <DependentUpon>SwetAlert.aspx</DependentUpon>
@@ -439,7 +496,20 @@
       <Name>BO</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

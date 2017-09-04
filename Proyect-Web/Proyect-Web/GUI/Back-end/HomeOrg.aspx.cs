@@ -33,6 +33,7 @@ namespace Proyect_Web
             string Foto = Session["Fotografia"].ToString();
             if (Foto=="")
             {
+
                 Image1.ImageUrl = "~/Img/user.png";
                 Perfil1.ImageUrl = "~/Img/user.png";
             }

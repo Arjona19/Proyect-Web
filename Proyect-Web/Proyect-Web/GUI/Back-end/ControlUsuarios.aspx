@@ -9,14 +9,22 @@
                     <div class="input-group">
                       <input name="table_search" class="form-control input-sm pull-right" style="width: 150px;" type="text" placeholder="Search">
                       <div class="input-group-btn">
-                        <button class="btn btn-sm btn-default"><i class="fa fa-search"></i></button>
                       </div>
                     </div>
                   </div>
                 </div>
-                 <asp:GridView ID="GridView1" runat="server" Cssclass="table table-bordered" Height="172px" Width="337px" OnPreRender="gvRender" OnRowCommand="Convertir">
+                 <asp:GridView ID="GridView1" runat="server" Cssclass="table table-bordered" Height="172px" Width="337px" OnPreRender="gvRender" OnRowCommand="Convertir" AutoGenerateColumns="False">
         <Columns>
-            <asp:ButtonField CommandName="btnConvert" Text="&lt;i class=&quot;btn btn-success&quot;&gt;Hacer Admin&lt;/i&gt;" />
+            <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+            <asp:BoundField DataField="Correo" HeaderText="Correo" SortExpression="Correo" />
+            <asp:BoundField DataField="SitioWeb" HeaderText="Sitio Web" SortExpression="SitioWeb" />
+            <asp:BoundField DataField="Usuario" HeaderText="Usuario" SortExpression="Usuario" />
+            <asp:ImageField DataImageUrlField="Fotografia" DataImageUrlFormatString="../../Img{0}" HeaderText="Fotografia">
+                <ControlStyle Height="200px" Width="200px" />
+            </asp:ImageField>
+            <asp:BoundField DataField="Correo1" HeaderText="Segundo Correo" SortExpression="Correo1" />
+            <asp:BoundField DataField="Correo2" HeaderText="Tercer Correo" SortExpression="Correo2" />
+            <asp:BoundField DataField="Telefono" HeaderText="Telefono" SortExpression="Telefono" />
         </Columns>
     </asp:GridView>
               </div>

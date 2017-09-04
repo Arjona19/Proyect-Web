@@ -178,14 +178,13 @@
   </div>
                               <div class="form-group">
                                    <label for="exampleFormControlSelect1">Ubicación</label>
-                                   <asp:DropDownList ID="dblUbicacion" CssClass="form-control" runat="server" DataSourceID="SqlDataSource1" DataTextField="Ubicacion" DataValueField="Ubicacion"></asp:DropDownList>
-                                   <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:EventosProyectoConnectionString %>" SelectCommand="SELECT [Ubicacion] FROM [Ubicaciones]"></asp:SqlDataSource>
+                                  <asp:TextBox ID="ModalMapaddress" CssClass="form-control" placeholder="Buscar ubicación.."  runat="server"></asp:TextBox>
                               </div>
-                              <div class="form-group">
+                           <%--   <div class="form-group">
                                   <button type="button" data-toggle="modal" data-target="#ModalMap" class="btn btn-default">
                                     <span class="glyphicon glyphicon-map-marker"></span> <span id="ubicacion">Seleccionar Ubicación:</span>
                                     </button>
-                              </div>             
+                              </div>   --%>          
                                 
                               
                           
@@ -216,8 +215,8 @@
                                  <asp:BoundField DataField="Fecha Inicio" HeaderText="Fecha de Inicio" SortExpression="FechaInicio" />
                                  <asp:BoundField DataField="Fecha Fin" HeaderText="Fecha de Finalizacion" SortExpression="FechaFin" />
                                  <asp:BoundField DataField="IDClasificacion" HeaderText="Categoria" SortExpression="IDClasificacion" />
-                                 <asp:BoundField DataField="IDUbicacion" HeaderText="Ubicación" SortExpression="IDUbicacion" />
                                  <asp:BoundField DataField="FotoEvento" HeaderText="Nombre de la Imagen" SortExpression="FotoEvento" />
+                                 <asp:BoundField DataField="Ubicacion" HeaderText="Ubicacion" SortExpression="Ubicacion" />
                              </Columns>
                           </asp:GridView>
                       </div><!-- /content-panel -->
@@ -231,7 +230,7 @@
 <div class="form-group">
 <label class="col-sm-2 control-label">Ubicación:</label>
 <div class="col-sm-9">
-    <asp:TextBox ID="ModalMapaddress" CssClass="form-control"  runat="server"></asp:TextBox>
+    
 
 </div>
 <div class="col-sm-1">

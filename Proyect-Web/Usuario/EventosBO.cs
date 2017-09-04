@@ -21,7 +21,7 @@ namespace BO
         public int Aprobacion { get; set; }
         public int IDUsuario { get; set; }
         public int Categoria { get; set; }
-        public int Ubicacion { get; set; }
+        public string Ubicacion { get; set; }
         public int IDevento { get; set; }
 
 

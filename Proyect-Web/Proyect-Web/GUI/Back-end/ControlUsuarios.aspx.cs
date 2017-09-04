@@ -48,5 +48,10 @@ namespace Proyect_Web.GUI.Back_end
             GridView1.DataSource = d.VerUsuarios();
             GridView1.DataBind();
         }
+
+        protected void DescargarReporte_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ReporteUsuarios.aspx"); 
+        }
     }
 }

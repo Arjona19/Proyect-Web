@@ -8,12 +8,15 @@ using DAO;
 using System.Data.SqlClient;
 using System.Data;
 
+
 namespace Proyect_Web.GUI.Back_end
 {
     public partial class Reportes : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+
             Fecha.Text = DateTime.Now.ToString();
             Label1.Text = DateTime.Now.ToString();
             Label2.Text = DateTime.Now.ToString();
@@ -50,6 +53,11 @@ namespace Proyect_Web.GUI.Back_end
                 con.Close();
                 con.Dispose();
             }
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

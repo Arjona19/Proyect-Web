@@ -24,7 +24,7 @@ namespace DAO
             EventosBO dat = (EventosBO)obj;
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con.ConectarBD();
-            sentenciaSQL = "INSERT INTO [dbo].[Evento]([Nombre],[Descripcion],[CostoEntrada],[HoraInicio],[HoraFin],[Fecha Fin],[Fecha Inicio],[FotoEvento],[Autorizado],[IDClasificacion],[IDUsuario],[IDUbicacion])VALUES('"+dat.Nombre+"','"+dat.Descripcion+"','"+dat.Costo+"','"+dat.HoraInicio+"','"+dat.HoraFin+"','"+dat.FechaFin+"','"+dat.FechaInicio+"' ,'"+dat.Fotografia+"','"+dat.Aprobacion+"','"+dat.Categoria+"','"+dat.IDUsuario+"','"+dat.Ubicacion+"')";
+            sentenciaSQL = "INSERT INTO [dbo].[Evento]([Nombre],[Descripcion],[CostoEntrada],[HoraInicio],[HoraFin],[Fecha Fin],[Fecha Inicio],[FotoEvento],[Autorizado],[IDClasificacion],[IDUsuario],[Ubicacion])VALUES('"+dat.Nombre+"','"+dat.Descripcion+"','"+dat.Costo+"','"+dat.HoraInicio+"','"+dat.HoraFin+"','"+dat.FechaFin+"','"+dat.FechaInicio+"' ,'"+dat.Fotografia+"','"+dat.Aprobacion+"','"+dat.Categoria+"','"+dat.IDUsuario+"','"+dat.Ubicacion+"')";
             return con.EjecutarSQL(sentenciaSQL);
         }
         public int ActualizarEvento(object obj)
@@ -35,7 +35,7 @@ namespace DAO
 
             cmd.Connection = con.ConectarBD();
 
-            sentenciaSQL = "UPDATE [dbo].[Evento]SET [Nombre] ='"+dat.Nombre+"',[Descripcion] ='"+dat.Descripcion+"',[CostoEntrada] ='"+dat.Costo+"' ,[HoraInicio] = '"+dat.HoraInicio+"',[HoraFin] = '"+dat.HoraFin+"',[Fecha Fin] = '"+dat.FechaFin+"',[Fecha Inicio] ='"+dat.FechaInicio+"',[FotoEvento] ='"+dat.Fotografia+"' ,[Autorizado] ='"+dat.Aprobacion+"' ,[IDClasificacion] ='"+dat.Categoria+"',[IDUsuario] = '"+dat.IDUsuario+"',[IDUbicacion] = '"+dat.Ubicacion+"'WHERE IDEvento = '"+dat.IDEvento+"'";
+            sentenciaSQL = "UPDATE [dbo].[Evento]SET [Nombre] ='"+dat.Nombre+"',[Descripcion] ='"+dat.Descripcion+"',[CostoEntrada] ='"+dat.Costo+"' ,[HoraInicio] = '"+dat.HoraInicio+"',[HoraFin] = '"+dat.HoraFin+"',[Fecha Fin] = '"+dat.FechaFin+"',[Fecha Inicio] ='"+dat.FechaInicio+"',[FotoEvento] ='"+dat.Fotografia+"' ,[Autorizado] ='"+dat.Aprobacion+"' ,[IDClasificacion] ='"+dat.Categoria+"',[IDUsuario] = '"+dat.IDUsuario+"',[Ubicacion] = '"+dat.Ubicacion+"'WHERE IDEvento = '"+dat.IDEvento+"'";
             return con.EjecutarSQL(sentenciaSQL);
         }
       

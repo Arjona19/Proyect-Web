@@ -68,7 +68,7 @@ namespace Proyect_Web.GUI.Back_end
             bo.Fotografia = "/" + NombreImagen;
             bo.Aprobacion = 0;
             bo.Categoria = Convert.ToInt32(Categoria.SelectedValue);
-            bo.Ubicacion = 1;
+            bo.Ubicacion = ModalMapaddress.Text;
             if (dao.GuardarEvento(bo) != 0)
             {
                 Response.Write("<script language=javascript>alert('Evento Guardado');</script>");
@@ -107,7 +107,7 @@ namespace Proyect_Web.GUI.Back_end
             bo.Fotografia = "/" + NombreImagen;
             bo.Aprobacion = 0;
             bo.Categoria = Convert.ToInt32(Categoria.SelectedValue);
-            bo.Ubicacion = 1;
+            bo.Ubicacion = ModalMapaddress.Text;
             if (dao.ActualizarEvento(bo) !=0)
             {
                 Response.Write("<script language=javascript>alert('Evento Actualizado');</script>");

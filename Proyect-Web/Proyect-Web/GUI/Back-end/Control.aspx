@@ -8,6 +8,7 @@
                   <div class="box-tools">
                     <div class="input-group">
                       <input name="table_search" class="form-control input-sm pull-right" style="width: 150px;" type="text" placeholder="Search">
+
                       <div class="input-group-btn">
                         <button class="btn btn-sm btn-default"><i class="fa fa-search"></i></button>
                       </div>
@@ -20,17 +21,24 @@
             <asp:BoundField DataField="IDEvento" HeaderText="ID" SortExpression="IDEvento">
             
             </asp:BoundField>
-            <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
-            <asp:BoundField DataField="CostoEntrada" HeaderText="Costo Entrada" SortExpression="CostoEntrada" />
             <asp:ImageField DataImageUrlField="FotoEvento" DataImageUrlFormatString="~/Img/{0}" HeaderText="Imagen">
                 <ControlStyle CssClass="img-thumnai" Height="100px" Width="200px" />
             </asp:ImageField>
+            <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+            <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" />
+            <asp:BoundField DataField="CostoEntrada" HeaderText="Costo Entrada" SortExpression="CostoEntrada" />
+            <asp:BoundField DataField="HoraInicio" HeaderText="Empieza" SortExpression="HoraInicio" />
+            <asp:BoundField DataField="HoraFin" HeaderText="Termina" SortExpression="HoraFin" />
+            <asp:BoundField DataField="Fecha Fin" HeaderText="Fecha de Inicio" SortExpression="Fecha Fin" />
+            <asp:BoundField DataField="Fecha Fin" HeaderText="Fecha de Fin" SortExpression="Fecha Fin" />
+            <asp:BoundField DataField="IDUsuario" HeaderText="Usuario" SortExpression="IDUsuario" />
+            <asp:BoundField DataField="Ubicacion" HeaderText="Ubicacion" SortExpression="Ubicacion" />
         </Columns>
     </asp:GridView>
               </div>
     <div class="box">
                 <div class="box-header">
-                  <h3 class="box-title">Eventos Aprobados</h3>
+                  <h3 class="box-title">Eventos Aprobadosh3>
                   <div class="box-tools">
                     <div class="input-group">
                       <input name="table_search" class="form-control input-sm pull-right" style="width: 150px;" type="text" placeholder="Search">
@@ -46,11 +54,18 @@
              <asp:BoundField DataField="IDEvento" HeaderText="ID" SortExpression="IDEvento">
             
             </asp:BoundField>
-            <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
-            <asp:BoundField DataField="CostoEntrada" HeaderText="Costo Entrada" SortExpression="CostoEntrada" />
             <asp:ImageField DataImageUrlField="FotoEvento" DataImageUrlFormatString="~/Img/{0}" HeaderText="Imagen">
                 <ControlStyle CssClass="img-thumnai" Height="100px" Width="200px" />
             </asp:ImageField>
+            <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+            <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" />
+            <asp:BoundField DataField="CostoEntrada" HeaderText="Costo Entrada" SortExpression="CostoEntrada" />
+            <asp:BoundField DataField="HoraInicio" HeaderText="Empieza" SortExpression="HoraInicio" />
+            <asp:BoundField DataField="HoraFin" HeaderText="Termina" SortExpression="HoraFin" />
+            <asp:BoundField DataField="Fecha Fin" HeaderText="Fecha de Inicio" SortExpression="Fecha Fin" />
+            <asp:BoundField DataField="Fecha Fin" HeaderText="Fecha de Fin" SortExpression="Fecha Fin" />
+            <asp:BoundField DataField="IDUsuario" HeaderText="Usuario" SortExpression="IDUsuario" />
+            <asp:BoundField DataField="Ubicacion" HeaderText="Ubicacion" SortExpression="Ubicacion" />
         </Columns>
     </asp:GridView>
               </div>
