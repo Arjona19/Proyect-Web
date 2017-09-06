@@ -16,14 +16,14 @@ namespace Proyect_Web {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class CrystalReport2 : ReportClass {
+    public class RUsuarios : ReportClass {
         
-        public CrystalReport2() {
+        public RUsuarios() {
         }
         
         public override string ResourceName {
             get {
-                return "CrystalReport2.rpt";
+                return "RUsuarios.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace Proyect_Web {
         
         public override string FullResourceName {
             get {
-                return "Proyect_Web.CrystalReport2.rpt";
+                return "Proyect_Web.RUsuarios.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace Proyect_Web {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedCrystalReport2 : Component, ICachedReport {
+    public class CachedRUsuarios : Component, ICachedReport {
         
-        public CachedCrystalReport2() {
+        public CachedRUsuarios() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace Proyect_Web {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            CrystalReport2 rpt = new CrystalReport2();
+            RUsuarios rpt = new RUsuarios();
             rpt.Site = this.Site;
             return rpt;
         }

@@ -43,7 +43,7 @@
                   <div class="box-tools">
                     <div class="input-group">
                       <div class="input-group-btn">
-                          <input type="button" class="btn btn-facebook" value="Descargar Reporte" onclick="DescargarPDF('Reporte2', 'Reporte de Eventos Aprobados')" />
+                        <asp:Button ID="Button2" CssClass="btn btn-facebook" runat="server" Text="Descargar Reporte" OnClick="Button2_Click" />
                         
                       </div>
                     </div>

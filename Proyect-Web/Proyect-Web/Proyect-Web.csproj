@@ -255,28 +255,6 @@
     <Content Include="assets\js\jquery-1.10.2.min.map" />
     <Content Include="GUI\Back-end\Admin.Master" />
     <Content Include="BackAdmin\bootstrap.css.map" />
-    <Content Include="DataSetUsuarios.xsc">
-      <DependentUpon>DataSetUsuarios.xsd</DependentUpon>
-    </Content>
-    <None Include="DataSetUsuarios.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSetUsuarios.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="DataSetUsuarios.xss">
-      <DependentUpon>DataSetUsuarios.xsd</DependentUpon>
-    </Content>
-    <Content Include="EventosProyectoDataSet1.xsc">
-      <DependentUpon>EventosProyectoDataSet1.xsd</DependentUpon>
-    </Content>
-    <None Include="EventosProyectoDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>EventosProyectoDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="EventosProyectoDataSet1.xss">
-      <DependentUpon>EventosProyectoDataSet1.xsd</DependentUpon>
-    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -304,28 +282,6 @@
     <Content Include="GUI\Back-end\HomeOrg.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CrystalReport1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport1.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="CrystalReport2.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport2.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="DataSetUsuarios.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSetUsuarios.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="EventosProyectoDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EventosProyectoDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="GoogleMapWeb.aspx.cs">
       <DependentUpon>GoogleMapWeb.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -467,6 +423,18 @@
     <Compile Include="ReporteUsuarios.aspx.designer.cs">
       <DependentUpon>ReporteUsuarios.aspx</DependentUpon>
     </Compile>
+    <Compile Include="REventosA.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>REventosA.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RUsuarios.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RUsuarios.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="SwetAlert.aspx.cs">
       <DependentUpon>SwetAlert.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -500,15 +468,14 @@
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="CrystalReport1.rpt">
+    <EmbeddedResource Include="REventosA.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+      <LastGenOutput>REventosA.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="CrystalReport2.rpt">
+    <EmbeddedResource Include="RUsuarios.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
+      <LastGenOutput>RUsuarios.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report1.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

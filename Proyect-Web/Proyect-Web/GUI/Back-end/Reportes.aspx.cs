@@ -60,10 +60,16 @@ namespace Proyect_Web.GUI.Back_end
         {
             Reporte();
         }
+       
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Reporte2();
+        }
         DataTable dt;
         public void Reporte()
         {
-            string ruta = Server.MapPath("../../CrystalReport2.rpt");
+            string ruta = Server.MapPath("../../RUsuarios.rpt");
             ReportDocument doc = new ReportDocument();
             doc.Load(ruta);
             doc.SetDataSource(dt);
@@ -71,6 +77,18 @@ namespace Proyect_Web.GUI.Back_end
             Response.ClearContent();
             Response.ClearHeaders();
             doc.ExportToHttpResponse(ExportFormatType.PortableDocFormat, Response, false, "Reporte Usuarios");
+        }
+        public void Reporte2()
+        {
+
+            string ruta = Server.MapPath("../../REventosA.rpt");
+            ReportDocument doc = new ReportDocument();
+            doc.Load(ruta);
+            doc.SetDataSource(dt);
+            Response.Buffer = false;
+            Response.ClearContent();
+            Response.ClearHeaders();
+            doc.ExportToHttpResponse(ExportFormatType.PortableDocFormat, Response, false, "Reporte Eventos");
         }
     }
 }
