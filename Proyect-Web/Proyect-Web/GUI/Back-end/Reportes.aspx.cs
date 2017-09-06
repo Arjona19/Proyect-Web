@@ -7,7 +7,8 @@ using System.Web.UI.WebControls;
 using DAO;
 using System.Data.SqlClient;
 using System.Data;
-
+using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.Shared;
 
 namespace Proyect_Web.GUI.Back_end
 {
@@ -57,7 +58,19 @@ namespace Proyect_Web.GUI.Back_end
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            
+            Reporte();
+        }
+        DataTable dt;
+        public void Reporte()
+        {
+            string ruta = Server.MapPath("../../CrystalReport2.rpt");
+            ReportDocument doc = new ReportDocument();
+            doc.Load(ruta);
+            doc.SetDataSource(dt);
+            Response.Buffer = false;
+            Response.ClearContent();
+            Response.ClearHeaders();
+            doc.ExportToHttpResponse(ExportFormatType.PortableDocFormat, Response, false, "Reporte Usuarios");
         }
     }
 }
