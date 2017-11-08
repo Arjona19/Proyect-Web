@@ -76,7 +76,6 @@
                     <div class="input-group">
                       
                       <div class="input-group-btn">
-                          <input type="button" id="Descargar" runat="server" class="btn btn-facebook" value="Descargar Reporte" onclick="DescargarPDF('Reporte3', 'Reporte de Eventos Rechazados')" />
                         
                       </div>
                     </div>
